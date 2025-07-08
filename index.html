@@ -647,9 +647,34 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
             gap: 2rem;
             margin-bottom: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 각 카드의 그리드 위치 지정 */
+        .pricing-card:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .pricing-card:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .pricing-card:nth-child(3) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .pricing-card:nth-child(4) {
+            grid-column: 2;
+            grid-row: 2;
         }
 
         .pricing-card {
@@ -1051,6 +1076,14 @@
         }
 
         /* Enhanced Responsive Design */
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                max-width: 800px;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -1095,7 +1128,18 @@
 
             .pricing-grid {
                 grid-template-columns: 1fr;
+                grid-template-rows: auto;
                 gap: 1.5rem;
+                max-width: 100%;
+            }
+
+            /* 모바일에서는 순서대로 세로 배열 */
+            .pricing-card:nth-child(1),
+            .pricing-card:nth-child(2),
+            .pricing-card:nth-child(3),
+            .pricing-card:nth-child(4) {
+                grid-column: 1;
+                grid-row: auto;
             }
 
             .pricing-header {
@@ -1716,7 +1760,7 @@
             <p class="section-subtitle fade-in-up">Ready to expand your business to Korea? Let's discuss your goals and create a customized market entry strategy.</p>
             <div class="contact-content">
                 <div class="contact-form fade-in-up">
-                    <h3>Request a Free Market Analysis</h3>
+                    <h3>Request a Free Market Test</h3>
                     <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGI4NhkO-o22lKZBUjErSJXDcc2HiIgeaCi_BG-7IfSNooNg/formResponse" method="post" id="contact-form-submit">
                         <div class="form-group">
                             <label for="name">Name</label>
