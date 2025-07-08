@@ -110,7 +110,6 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        }
 
         .hero h1 {
             font-size: 3.5rem;
@@ -278,7 +277,7 @@
         .slide-track {
             display: flex;
             animation: scroll 30s linear infinite;
-            width: calc(300px * 16); /* 8 images x 2 (for loop) */
+            width: calc(300px * 16);
         }
 
         @keyframes scroll {
@@ -311,7 +310,6 @@
             border-radius: 15px;
         }
 
-        /* Pause animation on hover */
         .activity-slider:hover .slide-track {
             animation-play-state: paused;
         }
@@ -660,6 +658,67 @@
         </div>
     </section>
 
+    <!-- Activity Banner Section -->
+    <section class="activity-banner">
+        <div class="banner-overlay">
+            <h2 class="banner-title">Our Work in Action</h2>
+            <p class="banner-subtitle">Real partnerships, real results in Korean market entry</p>
+        </div>
+        <div class="activity-slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="images/meeting1.jpg" alt="Business meeting with Korean partners">
+                </div>
+                <div class="slide">
+                    <img src="images/product-testing.jpg" alt="Product testing and quality inspection">
+                </div>
+                <div class="slide">
+                    <img src="images/exhibition.jpg" alt="Trade exhibition in Seoul">
+                </div>
+                <div class="slide">
+                    <img src="images/warehouse-visit.jpg" alt="Warehouse and logistics inspection">
+                </div>
+                <div class="slide">
+                    <img src="images/client-presentation.jpg" alt="Client presentation and consultation">
+                </div>
+                <div class="slide">
+                    <img src="images/market-research.jpg" alt="Market research and analysis">
+                </div>
+                <div class="slide">
+                    <img src="images/negotiation.jpg" alt="Contract negotiation session">
+                </div>
+                <div class="slide">
+                    <img src="images/product-launch.jpg" alt="Korean market product launch event">
+                </div>
+                <!-- Duplicate slides for seamless loop -->
+                <div class="slide">
+                    <img src="images/meeting1.jpg" alt="Business meeting with Korean partners">
+                </div>
+                <div class="slide">
+                    <img src="images/product-testing.jpg" alt="Product testing and quality inspection">
+                </div>
+                <div class="slide">
+                    <img src="images/exhibition.jpg" alt="Trade exhibition in Seoul">
+                </div>
+                <div class="slide">
+                    <img src="images/warehouse-visit.jpg" alt="Warehouse and logistics inspection">
+                </div>
+                <div class="slide">
+                    <img src="images/client-presentation.jpg" alt="Client presentation and consultation">
+                </div>
+                <div class="slide">
+                    <img src="images/market-research.jpg" alt="Market research and analysis">
+                </div>
+                <div class="slide">
+                    <img src="images/negotiation.jpg" alt="Contract negotiation session">
+                </div>
+                <div class="slide">
+                    <img src="images/product-launch.jpg" alt="Korean market product launch event">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services" class="services section">
         <div class="container">
             <h2 class="section-title">Service Offerings</h2>
@@ -812,11 +871,7 @@
             <div class="contact-content">
                 <div class="contact-form">
                     <h3>Request a Free Market Test</h3>
-                    <form id="contact-form" action="https://docs.google.com/forms/d/e/1E15T6GdCN3oxuMN0EhJ6LHYYfNxJezWdy8M4s5X9qQ0/formResponse" method="post" target="_blank">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="entry.1287956543" required>
-                        </div>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd1E15T6GdCN3oxuMN0EhJ6LHYYfNxJezWdy8M4s5X9qQ0/formResponse" method="post" target="_blank">
                         <div class="form-group">
                             <label for="company">Company</label>
                             <input type="text" id="company" name="entry.991095560" required>
@@ -840,7 +895,7 @@
                         </div>
                         <div class="form-group">
                             <label for="inquiry">Your Inquiry</label>
-                            <textarea id="inquiry" name="entry.132636790" rows="4" placeholder="Example: Hello, I'm John from SAMSONG Electronics. We manufacture premium consumer electronics and are interested in entering the Korean market. We would like to test our latest smartphone accessories through your platform. Could you provide information about market entry strategies, required certifications, and potential partnership opportunities? We're particularly interested in understanding Korean consumer preferences and the most effective sales channels for our products."></textarea>
+                            <textarea id="inquiry" name="entry.2030687152" rows="4" placeholder="Example: Hello, I'm John from SAMSONG Electronics. We manufacture premium consumer electronics and are interested in entering the Korean market. We would like to test our latest smartphone accessories through your platform. Could you provide information about market entry strategies, required certifications, and potential partnership opportunities? We're particularly interested in understanding Korean consumer preferences and the most effective sales channels for our products."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Request Free Consultation</button>
                     </form>
@@ -917,26 +972,6 @@
                 }
             });
 
-            // Form submission
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.textContent;
-                    submitBtn.textContent = 'Sending...';
-                    submitBtn.disabled = true;
-                    
-                    setTimeout(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        alert('Thank you for your inquiry! We will contact you within 24 hours.');
-                        this.reset();
-                    }, 2000);
-                });
-            }
-
             // Animation on scroll
             const observerOptions = {
                 threshold: 0.1,
@@ -962,4 +997,8 @@
         });
     </script>
 </body>
-</html>
+</html>">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="entry.1287956543" required>
+                        </div>
+                        <div class="form-group
