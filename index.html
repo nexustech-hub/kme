@@ -368,7 +368,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Activity Banner Section */
+        /* Activity Banner Section - 임시 숨김 */
         .activity-banner {
             background: var(--gradient-primary);
             padding: 100px 0;
@@ -464,6 +464,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
             display: block;
             transition: transform 0.3s ease;
         }
@@ -903,23 +904,205 @@
                 grid-template-columns: 1fr;
             }
 
+            /* 모바일 활동 배너 최적화 */
+            .activity-banner {
+                padding: 60px 0;
+            }
+
+            .banner-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .banner-overlay {
+                margin-bottom: 2.5rem;
+            }
+
+            .activity-slider {
+                border-radius: 12px;
+                margin: 0 -10px; /* 좌우 여백 조정 */
+            }
+
             .slide {
-                min-width: 280px;
-                height: 200px;
+                min-width: 180px; /* 더 작게 */
+                height: 120px; /* 더 작게 */
+                margin: 0 2px;
+                border-radius: 8px;
+                flex-shrink: 0;
             }
 
             .slide-track {
-                width: calc(280px * 14);
+                width: calc(180px * 14); /* 새 크기에 맞춤 */
+                animation: scroll-mobile 30s linear infinite;
             }
 
-            @keyframes scroll {
+            .slide img {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 8px;
+            }
+
+            @keyframes scroll-mobile {
                 0% {
                     transform: translateX(0);
                 }
                 100% {
-                    transform: translateX(calc(-280px * 7));
+                    transform: translateX(calc(-180px * 7));
                 }
             }
+
+            .slide:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        /* 추가 모바일 최적화 (더 작은 화면) */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .banner-title {
+                font-size: 1.6rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1rem;
+            }
+
+            .activity-slider {
+                margin: 0 -15px; /* 더 넓은 여백 조정 */
+            }
+
+            .slide {
+                min-width: 150px; /* 매우 작게 */
+                height: 100px; /* 매우 작게 */
+                margin: 0 1px;
+                border-radius: 6px;
+            }
+
+            .slide-track {
+                width: calc(150px * 14);
+                animation: scroll-small 25s linear infinite;
+            }
+
+            .slide img {
+                border-radius: 6px;
+            }
+
+            @keyframes scroll-small {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-150px * 7));
+                }
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        /* 감사 메시지 모달 스타일 */
+        .thank-you-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .thank-you-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(30, 64, 175, 0.3);
+            transform: translateY(30px);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .thank-you-modal.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-primary);
+            border-radius: 26px;
+            z-index: -1;
+        }
+
+        .modal-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 1s ease infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .modal-message {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .modal-close-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-close-btn:hover {
+            transform: translateY(-2px);
         }
 
         /* Scroll animations */
@@ -1194,7 +1377,7 @@
             <div class="contact-content">
                 <div class="contact-form fade-in-up">
                     <h3>Request a Free Market Test</h3>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGI4NhkO-o22lKZBUjErSJXDcc2HiIgeaCi_BG-7IfSNooNg/formResponse" method="post" target="_blank">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGI4NhkO-o22lKZBUjErSJXDcc2HiIgeaCi_BG-7IfSNooNg/formResponse" method="post" id="contact-form-submit">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="entry.1563196953" required>
@@ -1327,23 +1510,87 @@
                 observer.observe(element);
             });
 
-            // Add loading animation to form button
-            const form = document.querySelector('form');
+            // 향상된 폼 제출 처리 (모달 팝업)
+            const form = document.getElementById('contact-form-submit');
             if (form) {
-                form.addEventListener('submit', function() {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // 기본 제출 방지
+                    
                     const button = this.querySelector('button[type="submit"]');
                     const originalText = button.textContent;
                     
+                    // 로딩 상태
                     button.innerHTML = '<span style="display: inline-block; animation: spin 1s linear infinite;">⏳</span> Sending...';
                     button.disabled = true;
                     
-                    // Re-enable after form submission (for better UX)
+                    // FormData를 사용해서 숨겨진 iframe으로 제출
+                    const formData = new FormData(this);
+                    const iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    iframe.name = 'hidden_iframe';
+                    document.body.appendChild(iframe);
+                    
+                    // 폼을 iframe으로 제출
+                    this.target = 'hidden_iframe';
+                    this.submit();
+                    
+                    // 2초 후 성공 모달 표시
                     setTimeout(() => {
+                        showThankYouModal();
+                        
+                        // 폼 리셋
+                        this.reset();
                         button.textContent = originalText;
                         button.disabled = false;
-                    }, 3000);
+                        
+                        // iframe 제거
+                        setTimeout(() => {
+                            if (iframe.parentNode) {
+                                iframe.parentNode.removeChild(iframe);
+                            }
+                        }, 1000);
+                    }, 2000);
                 });
             }
+            
+            // 감사 모달 표시 함수
+            function showThankYouModal() {
+                // 모달 HTML 생성
+                const modalHTML = `
+                    <div class="thank-you-modal" id="thankYouModal">
+                        <div class="modal-content">
+                            <div class="modal-icon">🎉</div>
+                            <h3 class="modal-title">Thank You!</h3>
+                            <p class="modal-message">
+                                Your inquiry has been submitted successfully.<br>
+                                We will contact you within 24 hours.
+                            </p>
+                            <button class="modal-close-btn" onclick="closeThankYouModal()">
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                // 모달을 body에 추가
+                document.body.insertAdjacentHTML('beforeend', modalHTML);
+                
+                // 모달 표시
+                setTimeout(() => {
+                    document.getElementById('thankYouModal').classList.add('show');
+                }, 100);
+            }
+            
+            // 모달 닫기 함수 (전역 함수로 설정)
+            window.closeThankYouModal = function() {
+                const modal = document.getElementById('thankYouModal');
+                if (modal) {
+                    modal.classList.remove('show');
+                    setTimeout(() => {
+                        modal.remove();
+                    }, 300);
+                }
+            };
 
             // Add CSS animation for spinning loader
             const style = document.createElement('style');
