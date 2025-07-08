@@ -87,6 +87,101 @@
             align-items: center;
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Language Selector */
+        .language-selector {
+            position: relative;
+        }
+
+        .language-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: none;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .language-flag {
+            width: 20px;
+            height: 15px;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .flag-us { background: linear-gradient(to bottom, #ff0000 33%, #ffffff 33% 66%, #0000ff 66%); }
+        .flag-kr { background: linear-gradient(45deg, #ff0000 25%, #ffffff 25% 50%, #0000ff 50% 75%, #ffffff 75%); }
+        .flag-cn { background: linear-gradient(to bottom, #ff0000 60%, #ffff00 60%); }
+        .flag-vn { background: linear-gradient(to bottom, #ff0000 33%, #ffff00 33% 66%, #ff0000 66%); }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--white);
+            border: 1px solid rgba(30, 64, 175, 0.1);
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            min-width: 150px;
+        }
+
+        .language-selector:hover .language-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        .language-option:hover {
+            background: rgba(30, 64, 175, 0.05);
+        }
+
+        .language-option.active {
+            background: rgba(30, 64, 175, 0.1);
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .language-name {
+            font-weight: 500;
+        }
+
         .logo {
             font-weight: 800;
             font-size: 1.75rem;
@@ -574,6 +669,253 @@
             color: var(--medium-gray);
             line-height: 1.7;
             font-size: 1.05rem;
+        }
+
+        /* 2025 Season Offers Section */
+        .season-offers {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .season-offers::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(30,64,175,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        }
+
+        .season-offers .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .offer-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(30, 64, 175, 0.05);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--primary-blue);
+        }
+
+        .offer-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .offer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .offer-card:hover .offer-image img {
+            transform: scale(1.05);
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+        }
+
+        .offer-badge:nth-of-type(2n) {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #f97316 100%);
+        }
+
+        .offer-badge:nth-of-type(3n) {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        /* 특별 배지 스타일 */
+        .offer-card .offer-badge:contains("Guaranteed") {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+            }
+        }
+
+        .offer-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .offer-content h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            min-height: 3.6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .offer-content p {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            flex-grow: 1;
+            min-height: 4.8rem;
+        }
+
+        .offer-price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            min-height: 3rem;
+        }
+
+        .offer-price.single-price {
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .original-price {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            text-decoration: line-through;
+            font-weight: 500;
+        }
+
+        .sale-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* 협의/변동 가격 스타일 */
+        .sale-price:only-child {
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+            background: linear-gradient(135deg, var(--accent-gold), #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .offer-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            min-height: 2.5rem;
+        }
+
+        .feature {
+            background: rgba(30, 64, 175, 0.1);
+            color: var(--primary-blue);
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .offer-btn {
+            width: 100%;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: auto;
+        }
+
+        .offer-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .offer-btn:hover::before {
+            left: 100%;
+        }
+
+        .offer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+        }
+
+        .offers-cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--light-blue), rgba(255, 255, 255, 0.9));
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(30, 64, 175, 0.1);
+            box-shadow: var(--shadow-light);
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
         /* Enhanced Process Section */
@@ -1089,6 +1431,24 @@
                 display: none;
             }
 
+            .nav-right {
+                gap: 1rem;
+            }
+
+            .language-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .language-flag {
+                width: 16px;
+                height: 12px;
+            }
+
+            .language-dropdown {
+                min-width: 130px;
+            }
+
             .hero h1 {
                 font-size: 2.8rem;
             }
@@ -1124,6 +1484,23 @@
             .services-grid,
             .portfolio-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .offers-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .offer-image {
+                height: 180px;
+            }
+
+            .offer-content {
+                padding: 1.5rem;
+            }
+
+            .offers-cta {
+                padding: 2rem;
             }
 
             .pricing-grid {
@@ -1388,14 +1765,41 @@
     <header>
         <nav class="container">
             <div class="logo">Phluto | Korea Market Entry Agency</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="language-btn" id="currentLanguage">
+                        <span class="language-flag flag-us"></span>
+                        <span>English</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="language-dropdown">
+                        <button class="language-option active" data-lang="en">
+                            <span class="language-flag flag-us"></span>
+                            <span class="language-name">English</span>
+                        </button>
+                        <button class="language-option" data-lang="ko">
+                            <span class="language-flag flag-kr"></span>
+                            <span class="language-name">한국어</span>
+                        </button>
+                        <button class="language-option" data-lang="zh">
+                            <span class="language-flag flag-cn"></span>
+                            <span class="language-name">中文</span>
+                        </button>
+                        <button class="language-option" data-lang="vi">
+                            <span class="language-flag flag-vn"></span>
+                            <span class="language-name">Tiếng Việt</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -1408,7 +1812,7 @@
                 <p class="tagline">Connecting international manufacturers with Korean consumers through proven market entry strategies, local expertise, and data-driven results.</p>
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <a href="#contact" class="btn btn-secondary">Get Free Market Report</a>
+                    <a href="#contact" class="btn btn-secondary">Request a Sample</a>
                 </div>
             </div>
         </div>
@@ -1564,6 +1968,210 @@
         </div>
     </section>
 
+    <!-- 2025 Season Offers Section -->
+    <section class="season-offers section">
+        <div class="container">
+            <h2 class="section-title fade-in-up">What We Offer This Season in 2025</h2>
+            <p class="section-subtitle fade-in-up">Limited-time opportunities and exclusive services for Korean market entry</p>
+            
+            <div class="offers-grid">
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer1.jpg" alt="Korean E-commerce Setup Special" loading="lazy">
+                        <div class="offer-badge">New</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Korean E-commerce Setup Special</h3>
+                        <p>Complete marketplace integration with Coupang, Naver, and 11Street including professional product photography and Korean translation.</p>
+                        <div class="offer-price">
+                            <span class="original-price">$2,500</span>
+                            <span class="sale-price">$1,999</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ 3 Platform Setup</span>
+                            <span class="feature">✓ Professional Photos</span>
+                            <span class="feature">✓ Korean Translation</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer2.jpg" alt="Influencer Marketing Package" loading="lazy">
+                        <div class="offer-badge">Popular</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Influencer Marketing Package</h3>
+                        <p>3-month campaign with top Korean influencers in your niche, including content creation, posting schedule, and performance tracking.</p>
+                        <div class="offer-price">
+                            <span class="original-price">$5,000</span>
+                            <span class="sale-price">$3,999</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ 5+ Influencers</span>
+                            <span class="feature">✓ Content Creation</span>
+                            <span class="feature">✓ 3 Month Campaign</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer3.jpg" alt="Fast-Track Market Entry" loading="lazy">
+                        <div class="offer-badge">Limited</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Fast-Track Market Entry</h3>
+                        <p>Accelerated 30-day market entry program with expedited customs, priority platform approval, and dedicated support.</p>
+                        <div class="offer-price">
+                            <span class="original-price">$4,000</span>
+                            <span class="sale-price">$3,200</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ 30-Day Launch</span>
+                            <span class="feature">✓ Priority Support</span>
+                            <span class="feature">✓ Expedited Process</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer4.jpg" alt="Beauty Brand Specialist Package" loading="lazy">
+                        <div class="offer-badge">Trending</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Beauty Brand Specialist Package</h3>
+                        <p>Specialized 3-day/2-night program for cosmetics and skincare brands including K-beauty market insights, regulatory compliance, and beauty factory tour with cost optimization consultation.</p>
+                        <div class="offer-price">
+                            <span class="sale-price">Negotiable</span>
+                            <span class="price-note">2D/3N program • based on group size • negotiable</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ Beauty Specialists</span>
+                            <span class="feature">✓ Factory Tours</span>
+                            <span class="feature">✓ Cost Optimization</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer5.jpg" alt="Korean Language & Culture Consulting" loading="lazy">
+                        <div class="offer-badge">Essential</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Korean Language & Culture Consulting</h3>
+                        <p>Comprehensive cultural adaptation service including brand messaging, customer communication strategies, and cultural sensitivity training for successful market integration.</p>
+                        <div class="offer-price">
+                            <span class="original-price">$3,000</span>
+                            <span class="sale-price">$2,400</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ Cultural Training</span>
+                            <span class="feature">✓ Brand Messaging</span>
+                            <span class="feature">✓ Communication Strategy</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer6.jpg" alt="Premium Medical Guide Service" loading="lazy">
+                        <div class="offer-badge">Premium</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Premium Medical Guide Service</h3>
+                        <p>Professional medical guide service for Seoul National University and Yonsei University hospitals including appointment scheduling, translation, and comprehensive care coordination.</p>
+                        <div class="offer-price">
+                            <span class="original-price">$1,800</span>
+                            <span class="sale-price">$1,440</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ Top University Hospitals</span>
+                            <span class="feature">✓ Medical Translation</span>
+                            <span class="feature">✓ Care Coordination</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer7.jpg" alt="VIP Business Visitor Service" loading="lazy">
+                        <div class="offer-badge">VIP</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>VIP Business Visitor Custom Service</h3>
+                        <p>One-stop premium 3-day/4-night service for trade and business visitors including airport pickup, luxury accommodation, business meeting arrangements, and complete ground transportation.</p>
+                        <div class="offer-price">
+                            <span class="sale-price">Negotiable</span>
+                            <span class="price-note">3D/4N program • based on requirements • negotiable</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ Airport to Hotel</span>
+                            <span class="feature">✓ Business Meetings</span>
+                            <span class="feature">✓ Premium Transport</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer8.jpg" alt="Beauty Factory Tour & Quotation Service" loading="lazy">
+                        <div class="offer-badge">Exclusive</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Beauty Factory Tour & Quotation Service</h3>
+                        <p>Guided 2-day/3-night visits to Korean beauty manufacturing facilities with live quotation sessions, production planning consultation, and cost reduction strategy discussions.</p>
+                        <div class="offer-price">
+                            <span class="sale-price">Variable</span>
+                            <span class="price-note">2D/3N program • per factory visit • negotiable</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ Factory Tours</span>
+                            <span class="feature">✓ Live Quotations</span>
+                            <span class="feature">✓ Cost Reduction Tips</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="offer-card fade-in-up">
+                    <div class="offer-image">
+                        <img src="images/offer9.jpg" alt="Market Research & Item Sourcing Service" loading="lazy">
+                        <div class="offer-badge">Guaranteed</div>
+                    </div>
+                    <div class="offer-content">
+                        <h3>Market Research & Item Sourcing Service</h3>
+                        <p>Comprehensive 8-week program with hands-on factory visits to negotiate the best possible pricing. We walk the factories to find you the optimal cost solutions. Full refund if unsuccessful.</p>
+                        <div class="offer-price">
+                            <span class="original-price">$4,900</span>
+                            <span class="sale-price">$2,900</span>
+                        </div>
+                        <div class="offer-features">
+                            <span class="feature">✓ 8-Week Program</span>
+                            <span class="feature">✓ Factory Negotiations</span>
+                            <span class="feature">✓ 100% Money Back Guarantee</span>
+                        </div>
+                        <button class="offer-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offers-cta fade-in-up">
+                <p class="cta-text">All seasonal offers are valid until October 31, 2025. Contact us to discuss your specific needs and get started today!</p>
+                <a href="#contact" class="btn btn-primary">Get Your Custom Quote</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section class="pricing section">
         <div class="container">
@@ -1577,7 +2185,7 @@
                         <h3>Inquiry & Consultation</h3>
                         <div class="price">
                             <span class="currency">$</span>
-                            <span class="amount">500</span>
+                            <span class="amount">399</span>
                             <span class="period">one-time</span>
                         </div>
                     </div>
@@ -1604,7 +2212,7 @@
                         <h3>Product Sample & Market Test</h3>
                         <div class="price">
                             <span class="currency">$</span>
-                            <span class="amount">1,200</span>
+                            <span class="amount">1,590</span>
                             <span class="period">per product</span>
                         </div>
                     </div>
@@ -1834,6 +2442,35 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Language Selector Functionality
+            const languageOptions = document.querySelectorAll('.language-option');
+            const currentLanguageBtn = document.getElementById('currentLanguage');
+            
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const lang = this.dataset.lang;
+                    const flagClass = this.querySelector('.language-flag').className;
+                    const langName = this.querySelector('.language-name').textContent;
+                    
+                    // Update current language button
+                    currentLanguageBtn.innerHTML = `
+                        <span class="${flagClass}"></span>
+                        <span>${langName}</span>
+                        <span>▼</span>
+                    `;
+                    
+                    // Update active state
+                    languageOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Here you would typically trigger language change
+                    console.log('Language changed to:', lang);
+                    
+                    // You can add actual translation logic here
+                    // translatePage(lang);
+                });
+            });
+
             // Smooth scrolling for navigation links
             const navLinks = document.querySelectorAll('a[href^="#"]');
             navLinks.forEach(anchor => {
