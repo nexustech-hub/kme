@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phluto | Korea Market Entry Agency - Your Gateway to Korean Market Success</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,28 +12,49 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --light-blue: #dbeafe;
+            --dark-blue: #1e3a8a;
+            --accent-gold: #f59e0b;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --dark-gray: #334155;
+            --white: #ffffff;
+            --shadow-light: 0 4px 20px rgba(30, 64, 175, 0.08);
+            --shadow-medium: 0 10px 40px rgba(30, 64, 175, 0.15);
+            --shadow-heavy: 0 20px 60px rgba(30, 64, 175, 0.25);
+            --gradient-primary: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #fafafa;
+            color: var(--dark-gray);
+            background-color: var(--light-gray);
+            font-weight: 400;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
+        /* Enhanced Header */
         header {
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 1.2rem 0;
+            box-shadow: 0 8px 32px rgba(30, 64, 175, 0.08);
+            border-bottom: 1px solid rgba(30, 64, 175, 0.1);
+            transition: all 0.3s ease;
         }
 
         nav {
@@ -43,31 +64,54 @@
         }
 
         .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: #1e40af;
+            font-weight: 800;
+            font-size: 1.75rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.025em;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: var(--dark-gray);
             font-weight: 500;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #1e40af;
+            color: var(--primary-blue);
         }
 
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Enhanced Hero Section */
         .hero {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            padding: 120px 0 80px;
+            background: var(--gradient-hero);
+            padding: 140px 0 100px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -80,8 +124,18 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(30, 64, 175, 0.05) 0%, transparent 70%);
-            animation: float 20s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(30, 64, 175, 0.06) 0%, transparent 70%);
+            animation: float 25s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, var(--white), transparent);
         }
 
         @keyframes float {
@@ -89,7 +143,7 @@
                 transform: translateY(0px) rotate(0deg); 
             }
             50% { 
-                transform: translateY(-20px) rotate(180deg); 
+                transform: translateY(-30px) rotate(180deg); 
             }
         }
 
@@ -99,185 +153,273 @@
         }
 
         .profile-image {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            margin: 0 auto 2rem;
-            border: 6px solid #1e40af;
-            box-shadow: 0 20px 40px rgba(30, 64, 175, 0.3);
+            margin: 0 auto 2.5rem;
+            border: 8px solid var(--primary-blue);
+            box-shadow: var(--shadow-heavy);
             background-image: url('profile.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .profile-image::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            z-index: -1;
+            opacity: 0.3;
+            filter: blur(20px);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.02);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: #1e40af;
-            line-height: 1.2;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
         }
 
         .hero .subtitle {
-            font-size: 1.5rem;
-            color: #64748b;
+            font-size: 1.75rem;
+            color: var(--medium-gray);
             margin-bottom: 2rem;
             font-weight: 600;
+            letter-spacing: -0.01em;
         }
 
         .hero .tagline {
-            font-size: 1.2rem;
-            color: #475569;
-            margin-bottom: 3rem;
-            max-width: 600px;
+            font-size: 1.25rem;
+            color: var(--dark-gray);
+            margin-bottom: 3.5rem;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.7;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 2.5rem;
+            border-radius: 60px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
             border: 2px solid transparent;
             cursor: pointer;
-            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            min-width: 200px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            color: white;
-            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: var(--shadow-medium);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(30, 64, 175, 0.4);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-heavy);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: #1e40af;
-            border-color: #1e40af;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: #1e40af;
-            color: white;
-            transform: translateY(-2px);
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
         }
 
+        /* Enhanced Section Styles */
         .section {
-            padding: 80px 0;
+            padding: 120px 0;
+            position: relative;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1e40af;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.2rem;
-            color: #64748b;
-            margin-bottom: 4rem;
-            max-width: 600px;
+            font-size: 1.3rem;
+            color: var(--medium-gray);
+            margin-bottom: 5rem;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
 
+        /* About Section */
         .about {
-            background: white;
+            background: var(--white);
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--light-gray), var(--white));
         }
 
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 4rem;
+            gap: 5rem;
             align-items: center;
         }
 
         .about-info h3 {
-            font-size: 2rem;
-            color: #1e40af;
-            margin-bottom: 1rem;
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
         }
 
         .contact-info {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 15px;
+            background: linear-gradient(135deg, var(--light-blue), rgba(255, 255, 255, 0.8));
+            padding: 2.5rem;
+            border-radius: 24px;
             margin-bottom: 2rem;
+            border: 1px solid rgba(30, 64, 175, 0.1);
+            box-shadow: var(--shadow-light);
         }
 
         .contact-info h4 {
-            color: #1e40af;
-            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 1.2rem;
         }
 
         .contact-info p {
-            margin-bottom: 0.5rem;
-            color: #475569;
+            margin-bottom: 0.75rem;
+            color: var(--dark-gray);
+            font-weight: 500;
         }
 
         .about-description {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.8;
-            color: #475569;
+            color: var(--dark-gray);
+        }
+
+        .about-description h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
         }
 
         /* Activity Banner Section */
         .activity-banner {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            padding: 80px 0;
+            background: var(--gradient-primary);
+            padding: 100px 0;
             position: relative;
             overflow: hidden;
+        }
+
+        .activity-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
         }
 
         .banner-overlay {
             position: relative;
             z-index: 2;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .banner-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
 
         .banner-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.6;
         }
 
         .activity-slider {
             width: 100%;
             overflow: hidden;
             position: relative;
+            border-radius: 20px;
         }
 
         .slide-track {
             display: flex;
-            animation: scroll 25s linear infinite;
-            width: calc(280px * 14); /* 7 images x 2 (for loop) */
+            animation: scroll 30s linear infinite;
+            width: calc(320px * 14);
         }
 
         @keyframes scroll {
@@ -285,178 +427,258 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(calc(-280px * 7));
+                transform: translateX(calc(-320px * 7));
             }
         }
 
         .slide {
-            min-width: 280px;
-            height: 200px;
-            margin: 0 0px; /* 간격 제거 */
-            border-radius: 10px;
+            min-width: 320px;
+            height: 240px;
+            margin: 0 2px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
             flex-shrink: 0;
+            position: relative;
+        }
+
+        .slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(30, 64, 175, 0.1), rgba(59, 130, 246, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .slide:hover {
-            transform: scale(1.03);
+            transform: scale(1.05) rotateY(5deg);
+        }
+
+        .slide:hover::after {
+            opacity: 1;
         }
 
         .slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 10px;
             display: block;
+            transition: transform 0.3s ease;
         }
 
-        /* Pause animation on hover */
         .activity-slider:hover .slide-track {
             animation-play-state: paused;
         }
 
+        /* Enhanced Services Section */
         .services {
-            background: #f8fafc;
+            background: var(--light-gray);
+            position: relative;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 24px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 2px solid transparent;
+            box-shadow: var(--shadow-light);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(30, 64, 175, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.03), transparent);
+            transition: left 0.6s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(30, 64, 175, 0.15);
-            border-color: #1e40af;
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--primary-blue);
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-primary);
             border-radius: 50%;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            color: white;
+            font-size: 2.5rem;
+            color: var(--white);
+            box-shadow: var(--shadow-medium);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotateY(180deg);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
-            color: #1e40af;
-            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
         }
 
         .service-card p {
-            color: #64748b;
-            line-height: 1.6;
+            color: var(--medium-gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
         }
 
+        /* Enhanced Process Section */
         .process {
-            background: white;
+            background: var(--white);
         }
 
         .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
             position: relative;
         }
 
         .process-step {
             text-align: center;
             position: relative;
+            padding: 2rem;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
             border-radius: 50%;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--white);
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+
+        .step-number::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            z-index: -1;
+            opacity: 0.2;
+            filter: blur(20px);
         }
 
         .process-step h3 {
-            font-size: 1.3rem;
-            color: #1e40af;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
         }
 
         .process-step p {
-            color: #64748b;
+            color: var(--medium-gray);
+            line-height: 1.7;
         }
 
+        /* Enhanced Portfolio Section */
         .portfolio {
-            background: #f8fafc;
+            background: var(--light-gray);
         }
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
         }
 
         .portfolio-card {
-            background: white;
-            border-radius: 20px;
+            background: var(--white);
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s;
+            box-shadow: var(--shadow-light);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(30, 64, 175, 0.05);
         }
 
         .portfolio-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
         }
 
         .portfolio-image {
-            height: 200px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            height: 220px;
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: white;
+            font-size: 4rem;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent, rgba(255,255,255,0.1));
         }
 
         .portfolio-content {
-            padding: 2rem;
+            padding: 2.5rem;
         }
 
         .portfolio-card h3 {
-            color: #1e40af;
-            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-size: 1.4rem;
         }
 
         .portfolio-card p {
-            color: #64748b;
-            margin-bottom: 1rem;
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
         }
 
         .portfolio-stats {
             display: flex;
             justify-content: space-between;
-            margin-top: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(30, 64, 175, 0.1);
         }
 
         .stat {
@@ -464,59 +686,86 @@
         }
 
         .stat-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e40af;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-blue);
         }
 
         .stat-label {
             font-size: 0.9rem;
-            color: #64748b;
+            color: var(--medium-gray);
+            font-weight: 500;
         }
 
+        /* Enhanced Contact Section */
         .contact {
-            background: white;
+            background: var(--white);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--light-gray), var(--white));
         }
 
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 5rem;
         }
 
         .contact-form {
-            background: #f8fafc;
-            padding: 3rem;
-            border-radius: 20px;
+            background: linear-gradient(135deg, var(--light-blue), rgba(255, 255, 255, 0.9));
+            padding: 3.5rem;
+            border-radius: 24px;
+            box-shadow: var(--shadow-light);
+            border: 1px solid rgba(30, 64, 175, 0.1);
+        }
+
+        .contact-form h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             font-weight: 600;
-            color: #1e40af;
+            color: var(--primary-blue);
+            font-size: 1.05rem;
         }
 
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
+            padding: 1.25rem;
+            border: 2px solid rgba(30, 64, 175, 0.1);
+            border-radius: 12px;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
         }
 
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #1e40af;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1);
+            transform: translateY(-2px);
         }
 
         .contact-info-section {
@@ -528,73 +777,107 @@
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #f8fafc;
-            border-radius: 15px;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(30, 64, 175, 0.05);
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 1rem;
-            color: white;
-            font-size: 1.2rem;
+            margin-right: 1.5rem;
+            color: var(--white);
+            font-size: 1.4rem;
+            box-shadow: var(--shadow-light);
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: var(--medium-gray);
+            font-weight: 500;
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
+            margin-top: 3rem;
         }
 
         .social-link {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--white);
             text-decoration: none;
-            font-size: 1.2rem;
-            transition: transform 0.3s;
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-light);
         }
 
         .social-link:hover {
-            transform: scale(1.1);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: var(--shadow-medium);
         }
 
+        /* Enhanced Footer */
         footer {
-            background: #1e40af;
-            color: white;
+            background: var(--primary-blue);
+            color: var(--white);
             text-align: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
+            position: relative;
         }
 
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        /* Enhanced Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             .hero .subtitle {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
 
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 3rem;
             }
 
             .cta-buttons {
@@ -606,6 +889,49 @@
                 width: 100%;
                 max-width: 300px;
             }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .slide {
+                min-width: 280px;
+                height: 200px;
+            }
+
+            .slide-track {
+                width: calc(280px * 14);
+            }
+
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-280px * 7));
+                }
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -641,10 +967,10 @@
 
     <section id="about" class="about section">
         <div class="container">
-            <h2 class="section-title">About Jay Jung</h2>
-            <p class="section-subtitle">Your dedicated partner for successful Korean market expansion</p>
+            <h2 class="section-title fade-in-up">About Jay Jung</h2>
+            <p class="section-subtitle fade-in-up">Your dedicated partner for successful Korean market expansion</p>
             <div class="about-content">
-                <div class="about-info">
+                <div class="about-info fade-in-up">
                     <div class="contact-info">
                         <h4>Contact Information</h4>
                         <p><strong>Name:</strong> Jay Jung</p>
@@ -652,7 +978,7 @@
                         <p><strong>Company:</strong> Phluto | Korea Market Entry Agency</p>
                     </div>
                 </div>
-                <div class="about-description">
+                <div class="about-description fade-in-up">
                     <h3>Bridging Global Innovation with Korean Market Success</h3>
                     <p>I help international brands enter the Korean market through tailored product sourcing, e-commerce setup, logistics, and influencer marketing. With extensive experience in cross-border trade and deep understanding of local consumer trends, I connect manufacturers with real Korean customers.</p>
                     <p>My comprehensive approach combines market research, strategic planning, and hands-on execution to ensure your products not only enter the Korean market but thrive in it. From initial market testing to full-scale distribution, I provide end-to-end support for sustainable growth.</p>
@@ -718,40 +1044,40 @@
 
     <section id="services" class="services section">
         <div class="container">
-            <h2 class="section-title">Service Offerings</h2>
-            <p class="section-subtitle">Comprehensive solutions for Korean market success</p>
+            <h2 class="section-title fade-in-up">Service Offerings</h2>
+            <p class="section-subtitle fade-in-up">Comprehensive solutions for Korean market success</p>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card fade-in-up">
                     <div class="service-icon">🎯</div>
                     <h3>Product Sourcing</h3>
                     <p>Strategic product selection and supplier verification tailored to Korean market preferences and regulations.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in-up">
                     <div class="service-icon">🛒</div>
                     <h3>Marketplace Entry</h3>
                     <p>Complete setup and optimization on major Korean platforms including Coupang, Naver Shopping, and 11Street.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in-up">
                     <div class="service-icon">📝</div>
                     <h3>Product Listing & Translation</h3>
                     <p>Professional Korean localization and SEO-optimized product descriptions that convert browsers into buyers.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in-up">
                     <div class="service-icon">📊</div>
                     <h3>Test Sales & Feedback</h3>
                     <p>Small-scale market testing with real customer feedback to optimize products before full launch.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in-up">
                     <div class="service-icon">📱</div>
                     <h3>SNS/Influencer Marketing</h3>
                     <p>Strategic social media campaigns and influencer partnerships to build brand awareness and drive sales.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in-up">
                     <div class="service-icon">🚚</div>
                     <h3>Local CS & Logistics</h3>
                     <p>Comprehensive customer service and fulfillment solutions to ensure smooth operations and customer satisfaction.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card fade-in-up">
                     <div class="service-icon">🔍</div>
                     <h3>Competitor Analysis</h3>
                     <p>In-depth market research and competitive intelligence to position your products for maximum impact.</p>
@@ -762,25 +1088,25 @@
 
     <section id="process" class="process section">
         <div class="container">
-            <h2 class="section-title">Our Process</h2>
-            <p class="section-subtitle">A proven 4-step approach to Korean market success</p>
+            <h2 class="section-title fade-in-up">Our Process</h2>
+            <p class="section-subtitle fade-in-up">A proven 4-step approach to Korean market success</p>
             <div class="process-steps">
-                <div class="process-step">
+                <div class="process-step fade-in-up">
                     <div class="step-number">1</div>
                     <h3>Inquiry & Consultation</h3>
                     <p>Comprehensive market analysis and strategy development tailored to your product and goals.</p>
                 </div>
-                <div class="process-step">
+                <div class="process-step fade-in-up">
                     <div class="step-number">2</div>
                     <h3>Product Sample & Market Test</h3>
                     <p>Small-scale testing with real Korean consumers to validate demand and optimize positioning.</p>
                 </div>
-                <div class="process-step">
+                <div class="process-step fade-in-up">
                     <div class="step-number">3</div>
                     <h3>Feedback & Local Optimization</h3>
                     <p>Product refinement and localization based on market response and consumer insights.</p>
                 </div>
-                <div class="process-step">
+                <div class="process-step fade-in-up">
                     <div class="step-number">4</div>
                     <h3>Full-scale Distribution & Marketing</h3>
                     <p>Complete market launch with ongoing support, marketing, and performance optimization.</p>
@@ -791,10 +1117,10 @@
 
     <section id="portfolio" class="portfolio section">
         <div class="container">
-            <h2 class="section-title">Success Stories</h2>
-            <p class="section-subtitle">Proven results for international brands entering Korea</p>
+            <h2 class="section-title fade-in-up">Success Stories</h2>
+            <p class="section-subtitle fade-in-up">Proven results for international brands entering Korea</p>
             <div class="portfolio-grid">
-                <div class="portfolio-card">
+                <div class="portfolio-card fade-in-up">
                     <div class="portfolio-image">💄</div>
                     <div class="portfolio-content">
                         <h3>Beauty Brand Launch</h3>
@@ -815,7 +1141,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card fade-in-up">
                     <div class="portfolio-image">🏠</div>
                     <div class="portfolio-content">
                         <h3>Home Appliance Entry</h3>
@@ -836,7 +1162,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card fade-in-up">
                     <div class="portfolio-image">🍃</div>
                     <div class="portfolio-content">
                         <h3>Organic Food Distribution</h3>
@@ -863,23 +1189,27 @@
 
     <section id="contact" class="contact section">
         <div class="container">
-            <h2 class="section-title">Start Your Korean Market Journey</h2>
-            <p class="section-subtitle">Ready to expand your business to Korea? Let's discuss your goals and create a customized market entry strategy.</p>
+            <h2 class="section-title fade-in-up">Start Your Korean Market Journey</h2>
+            <p class="section-subtitle fade-in-up">Ready to expand your business to Korea? Let's discuss your goals and create a customized market entry strategy.</p>
             <div class="contact-content">
-                <div class="contact-form">
+                <div class="contact-form fade-in-up">
                     <h3>Request a Free Market Test</h3>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd1E15T6GdCN3oxuMN0EhJ6LHYYfNxJezWdy8M4s5X9qQ0/formResponse" method="post" target="_blank">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGI4NhkO-o22lKZBUjErSJXDcc2HiIgeaCi_BG-7IfSNooNg/formResponse" method="post" target="_blank">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="entry.1563196953" required>
+                        </div>
                         <div class="form-group">
                             <label for="company">Company</label>
-                            <input type="text" id="company" name="entry.991095560" required>
+                            <input type="text" id="company" name="entry.2024278864" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="entry.446414811" required>
+                            <input type="email" id="email" name="entry.1741471290" required>
                         </div>
                         <div class="form-group">
                             <label for="product-type">Product Type</label>
-                            <select id="product-type" name="entry.1077524502" required>
+                            <select id="product-type" name="entry.1323199226" required>
                                 <option value="">Select Product Category</option>
                                 <option value="Beauty & Cosmetics">Beauty & Cosmetics</option>
                                 <option value="Fashion & Accessories">Fashion & Accessories</option>
@@ -892,12 +1222,12 @@
                         </div>
                         <div class="form-group">
                             <label for="inquiry">Your Inquiry</label>
-                            <textarea id="inquiry" name="entry.2030687152" rows="4" placeholder="Example: Hello, I'm John from SAMSONG Electronics. We manufacture premium consumer electronics and are interested in entering the Korean market. We would like to test our latest smartphone accessories through your platform. Could you provide information about market entry strategies, required certifications, and potential partnership opportunities? We're particularly interested in understanding Korean consumer preferences and the most effective sales channels for our products."></textarea>
+                            <textarea id="inquiry" name="entry.666704390" rows="4" placeholder="Example: Hello, I'm John from SAMSONG Electronics. We manufacture premium consumer electronics and are interested in entering the Korean market. We would like to test our latest smartphone accessories through your platform. Could you provide information about market entry strategies, required certifications, and potential partnership opportunities? We're particularly interested in understanding Korean consumer preferences and the most effective sales channels for our products."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Request Free Consultation</button>
                     </form>
                 </div>
-                <div class="contact-info-section">
+                <div class="contact-info-section fade-in-up">
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
                         <div>
@@ -937,7 +1267,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling
+            // Smooth scrolling for navigation links
             const navLinks = document.querySelectorAll('a[href^="#"]');
             navLinks.forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
@@ -957,19 +1287,27 @@
                 });
             });
 
-            // Header scroll effect
+            // Enhanced header scroll effect
             const header = document.querySelector('header');
+            let lastScrollTop = 0;
+            
             window.addEventListener('scroll', function() {
                 const scrollTop = window.pageYOffset;
                 
                 if (scrollTop > 100) {
                     header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.backdropFilter = 'blur(25px)';
+                    header.style.boxShadow = '0 12px 40px rgba(30, 64, 175, 0.12)';
                 } else {
                     header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.backdropFilter = 'blur(20px)';
+                    header.style.boxShadow = '0 8px 32px rgba(30, 64, 175, 0.08)';
                 }
+                
+                lastScrollTop = scrollTop;
             });
 
-            // Animation on scroll
+            // Intersection Observer for scroll animations
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -978,24 +1316,47 @@
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('visible');
                     }
                 });
             }, observerOptions);
 
-            const animateElements = document.querySelectorAll('.service-card, .portfolio-card, .process-step');
-            animateElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            // Observe all fade-in-up elements
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            fadeElements.forEach(element => {
                 observer.observe(element);
             });
+
+            // Add loading animation to form button
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    const button = this.querySelector('button[type="submit"]');
+                    const originalText = button.textContent;
+                    
+                    button.innerHTML = '<span style="display: inline-block; animation: spin 1s linear infinite;">⏳</span> Sending...';
+                    button.disabled = true;
+                    
+                    // Re-enable after form submission (for better UX)
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                        button.disabled = false;
+                    }, 3000);
+                });
+            }
+
+            // Add CSS animation for spinning loader
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(style);
+
+            console.log('Beautiful Korean Market Entry Agency website loaded! ✨');
         });
     </script>
 </body>
-</html>">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="entry.1287956543" required>
-                        </div>
-                        <div class="form-group
+</html>
