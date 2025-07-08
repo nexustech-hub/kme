@@ -1,4 +1,42 @@
-<!DOCTYPE html>
+<div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🎯</div>
+                    <h3 data-translate="service_sourcing_title">Product Sourcing</h3>
+                    <p data-translate="service_sourcing_desc">Strategic product selection and supplier verification tailored to Korean market preferences and regulations.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🛒</div>
+                    <h3 data-translate="service_marketplace_title">Marketplace Entry</h3>
+                    <p data-translate="service_marketplace_desc">Complete setup and optimization on major Korean platforms including Coupang, Naver Shopping, and 11Street.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">📝</div>
+                    <h3 data-translate="service_listing_title">Product Listing & Translation</h3>
+                    <p data-translate="service_listing_desc">Professional Korean localization and SEO-optimized product descriptions that convert browsers into buyers.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">📊</div>
+                    <h3 data-translate="service_testing_title">Test Sales & Feedback</h3>
+                    <p data-translate="service_testing_desc">Small-scale market testing with real customer feedback to optimize products before full launch.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">📱</div>
+                    <h3 data-translate="service_marketing_title">SNS/Influencer Marketing</h3>
+                    <p data-translate="service_marketing_desc">Strategic social media campaigns and influencer partnerships to build brand awareness and drive sales.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🚚</div>
+                    <h3 data-translate="service_logistics_title">Local CS & Logistics</h3>
+                    <p data-translate="service_logistics_desc">Comprehensive customer service and fulfillment solutions to ensure smooth operations and customer satisfaction.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🔍</div>
+                    <h3 data-translate="service_analysis_title">Competitor Analysis</h3>
+                    <p data-translate="service_analysis_desc">In-depth market research and competitive intelligence to position your products for maximum impact.</p>
+                </div>
+            </div>        <div class="container">
+            <h2 class="section-title fade-in-up" data-translate="season_title">What We Offer This Season in 2025</h2>
+            <p class="section-subtitle fade-in-up" data-translate="season_subtitle">Limited-time opportunities and exclusive services for Korean market entry</p><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -129,6 +167,7 @@
         .flag-kr { background: linear-gradient(45deg, #ff0000 25%, #ffffff 25% 50%, #0000ff 50% 75%, #ffffff 75%); }
         .flag-cn { background: linear-gradient(to bottom, #ff0000 60%, #ffff00 60%); }
         .flag-vn { background: linear-gradient(to bottom, #ff0000 33%, #ffff00 33% 66%, #ff0000 66%); }
+        .flag-jp { background: radial-gradient(circle at center, #ff0000 30%, #ffffff 30%); }
 
         .language-dropdown {
             position: absolute;
@@ -1767,12 +1806,12 @@
             <div class="logo">Phluto | Korea Market Entry Agency</div>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-translate="nav_home">Home</a></li>
+                    <li><a href="#about" data-translate="nav_about">About</a></li>
+                    <li><a href="#services" data-translate="nav_services">Services</a></li>
+                    <li><a href="#process" data-translate="nav_process">Process</a></li>
+                    <li><a href="#portfolio" data-translate="nav_portfolio">Portfolio</a></li>
+                    <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
                 </ul>
                 <div class="language-selector">
                     <button class="language-btn" id="currentLanguage">
@@ -1793,6 +1832,10 @@
                             <span class="language-flag flag-cn"></span>
                             <span class="language-name">中文</span>
                         </button>
+                        <button class="language-option" data-lang="ja">
+                            <span class="language-flag flag-jp"></span>
+                            <span class="language-name">日本語</span>
+                        </button>
                         <button class="language-option" data-lang="vi">
                             <span class="language-flag flag-vn"></span>
                             <span class="language-name">Tiếng Việt</span>
@@ -1807,12 +1850,12 @@
         <div class="container">
             <div class="hero-content">
                 <div class="profile-image"></div>
-                <h1>Your Trusted Partner for Korean Market Entry</h1>
-                <p class="subtitle">Global Brands. Local Execution.</p>
-                <p class="tagline">Connecting international manufacturers with Korean consumers through proven market entry strategies, local expertise, and data-driven results.</p>
+                <h1 data-translate="hero_title">Your Trusted Partner for Korean Market Entry</h1>
+                <p class="subtitle" data-translate="hero_subtitle">Global Brands. Local Execution.</p>
+                <p class="tagline" data-translate="hero_tagline">Connecting international manufacturers with Korean consumers through proven market entry strategies, local expertise, and data-driven results.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <a href="#contact" class="btn btn-secondary">Request a Sample</a>
+                    <a href="#contact" class="btn btn-primary" data-translate="hero_btn_primary">Get Started</a>
+                    <a href="#contact" class="btn btn-secondary" data-translate="hero_btn_secondary">Request a Sample</a>
                 </div>
             </div>
         </div>
@@ -1820,21 +1863,21 @@
 
     <section id="about" class="about section">
         <div class="container">
-            <h2 class="section-title fade-in-up">About Jay Jung</h2>
-            <p class="section-subtitle fade-in-up">Your dedicated partner for successful Korean market expansion</p>
+            <h2 class="section-title fade-in-up" data-translate="about_title">About Jay Jung</h2>
+            <p class="section-subtitle fade-in-up" data-translate="about_subtitle">Your dedicated partner for successful Korean market expansion</p>
             <div class="about-content">
                 <div class="about-info fade-in-up">
                     <div class="contact-info">
-                        <h4>Contact Information</h4>
-                        <p><strong>Name:</strong> Jay Jung</p>
-                        <p><strong>Email:</strong> koreanmarketentry@gmail.com</p>
-                        <p><strong>Company:</strong> Phluto | Korea Market Entry Agency</p>
+                        <h4 data-translate="about_contact_title">Contact Information</h4>
+                        <p><strong data-translate="about_contact_name">Name:</strong> Jay Jung</p>
+                        <p><strong data-translate="about_contact_email">Email:</strong> koreanmarketentry@gmail.com</p>
+                        <p><strong data-translate="about_contact_company">Company:</strong> Phluto | Korea Market Entry Agency</p>
                     </div>
                 </div>
                 <div class="about-description fade-in-up">
-                    <h3>Bridging Global Innovation with Korean Market Success</h3>
-                    <p>I help international brands enter the Korean market through tailored product sourcing, e-commerce setup, logistics, and influencer marketing. With extensive experience in cross-border trade and deep understanding of local consumer trends, I connect manufacturers with real Korean customers.</p>
-                    <p>My comprehensive approach combines market research, strategic planning, and hands-on execution to ensure your products not only enter the Korean market but thrive in it. From initial market testing to full-scale distribution, I provide end-to-end support for sustainable growth.</p>
+                    <h3 data-translate="about_main_title">Bridging Global Innovation with Korean Market Success</h3>
+                    <p data-translate="about_description_1">I help international brands enter the Korean market through tailored product sourcing, e-commerce setup, logistics, and influencer marketing. With extensive experience in cross-border trade and deep understanding of local consumer trends, I connect manufacturers with real Korean customers.</p>
+                    <p data-translate="about_description_2">My comprehensive approach combines market research, strategic planning, and hands-on execution to ensure your products not only enter the Korean market but thrive in it. From initial market testing to full-scale distribution, I provide end-to-end support for sustainable growth.</p>
                 </div>
             </div>
         </div>
@@ -1843,8 +1886,8 @@
     <!-- Activity Banner Section -->
     <section class="activity-banner">
         <div class="banner-overlay">
-            <h2 class="banner-title">Our Work in Action</h2>
-            <p class="banner-subtitle">Real partnerships, real results in Korean market entry</p>
+            <h2 class="banner-title" data-translate="activity_title">Our Work in Action</h2>
+            <p class="banner-subtitle" data-translate="activity_subtitle">Real partnerships, real results in Korean market entry</p>
         </div>
         <div class="activity-slider">
             <div class="slide-track">
@@ -1897,8 +1940,8 @@
 
     <section id="services" class="services section">
         <div class="container">
-            <h2 class="section-title fade-in-up">Service Offerings</h2>
-            <p class="section-subtitle fade-in-up">Comprehensive solutions for Korean market success</p>
+            <h2 class="section-title fade-in-up" data-translate="services_title">Service Offerings</h2>
+            <p class="section-subtitle fade-in-up" data-translate="services_subtitle">Comprehensive solutions for Korean market success</p>
             <div class="services-grid">
                 <div class="service-card fade-in-up">
                     <div class="service-icon">🎯</div>
@@ -1941,28 +1984,28 @@
 
     <section id="process" class="process section">
         <div class="container">
-            <h2 class="section-title fade-in-up">Our Process</h2>
-            <p class="section-subtitle fade-in-up">A proven 4-step approach to Korean market success</p>
+            <h2 class="section-title fade-in-up" data-translate="process_title">Our Process</h2>
+            <p class="section-subtitle fade-in-up" data-translate="process_subtitle">A proven 4-step approach to Korean market success</p>
             <div class="process-steps">
                 <div class="process-step fade-in-up">
                     <div class="step-number">1</div>
-                    <h3>Inquiry & Consultation</h3>
-                    <p>Comprehensive market analysis and strategy development tailored to your product and goals.</p>
+                    <h3 data-translate="process_step1_title">Inquiry & Consultation</h3>
+                    <p data-translate="process_step1_desc">Comprehensive market analysis and strategy development tailored to your product and goals.</p>
                 </div>
                 <div class="process-step fade-in-up">
                     <div class="step-number">2</div>
-                    <h3>Product Sample & Market Test</h3>
-                    <p>Small-scale testing with real Korean consumers to validate demand and optimize positioning.</p>
+                    <h3 data-translate="process_step2_title">Product Sample & Market Test</h3>
+                    <p data-translate="process_step2_desc">Small-scale testing with real Korean consumers to validate demand and optimize positioning.</p>
                 </div>
                 <div class="process-step fade-in-up">
                     <div class="step-number">3</div>
-                    <h3>Feedback & Local Optimization</h3>
-                    <p>Product refinement and localization based on market response and consumer insights.</p>
+                    <h3 data-translate="process_step3_title">Feedback & Local Optimization</h3>
+                    <p data-translate="process_step3_desc">Product refinement and localization based on market response and consumer insights.</p>
                 </div>
                 <div class="process-step fade-in-up">
                     <div class="step-number">4</div>
-                    <h3>Full-scale Distribution & Marketing</h3>
-                    <p>Complete market launch with ongoing support, marketing, and performance optimization.</p>
+                    <h3 data-translate="process_step4_title">Full-scale Distribution & Marketing</h3>
+                    <p data-translate="process_step4_desc">Complete market launch with ongoing support, marketing, and performance optimization.</p>
                 </div>
             </div>
         </div>
@@ -1981,8 +2024,8 @@
                         <div class="offer-badge">New</div>
                     </div>
                     <div class="offer-content">
-                        <h3>Korean E-commerce Setup Special</h3>
-                        <p>Complete marketplace integration with Coupang, Naver, and 11Street including professional product photography and Korean translation.</p>
+                        <h3 data-translate="offer_ecommerce_title">Korean E-commerce Setup Special</h3>
+                        <p data-translate="offer_ecommerce_desc">Complete marketplace integration with Coupang, Naver, and 11Street including professional product photography and Korean translation.</p>
                         <div class="offer-price">
                             <span class="original-price">$2,500</span>
                             <span class="sale-price">$1,999</span>
@@ -1992,7 +2035,7 @@
                             <span class="feature">✓ Professional Photos</span>
                             <span class="feature">✓ Korean Translation</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
 
@@ -2002,8 +2045,8 @@
                         <div class="offer-badge">Popular</div>
                     </div>
                     <div class="offer-content">
-                        <h3>Influencer Marketing Package</h3>
-                        <p>3-month campaign with top Korean influencers in your niche, including content creation, posting schedule, and performance tracking.</p>
+                        <h3 data-translate="offer_influencer_title">Influencer Marketing Package</h3>
+                        <p data-translate="offer_influencer_desc">3-month campaign with top Korean influencers in your niche, including content creation, posting schedule, and performance tracking.</p>
                         <div class="offer-price">
                             <span class="original-price">$5,000</span>
                             <span class="sale-price">$3,999</span>
@@ -2013,7 +2056,7 @@
                             <span class="feature">✓ Content Creation</span>
                             <span class="feature">✓ 3 Month Campaign</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
 
@@ -2023,8 +2066,8 @@
                         <div class="offer-badge">Limited</div>
                     </div>
                     <div class="offer-content">
-                        <h3>Fast-Track Market Entry</h3>
-                        <p>Accelerated 30-day market entry program with expedited customs, priority platform approval, and dedicated support.</p>
+                        <h3 data-translate="offer_fasttrack_title">Fast-Track Market Entry</h3>
+                        <p data-translate="offer_fasttrack_desc">Accelerated 30-day market entry program with expedited customs, priority platform approval, and dedicated support.</p>
                         <div class="offer-price">
                             <span class="original-price">$4,000</span>
                             <span class="sale-price">$3,200</span>
@@ -2034,7 +2077,7 @@
                             <span class="feature">✓ Priority Support</span>
                             <span class="feature">✓ Expedited Process</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
 
@@ -2044,10 +2087,10 @@
                         <div class="offer-badge">Trending</div>
                     </div>
                     <div class="offer-content">
-                        <h3>Beauty Brand Specialist Package</h3>
-                        <p>Specialized 3-day/2-night program for cosmetics and skincare brands including K-beauty market insights, regulatory compliance, and beauty factory tour with cost optimization consultation.</p>
+                        <h3 data-translate="offer_beauty_title">Beauty Brand Specialist Package</h3>
+                        <p data-translate="offer_beauty_desc">Specialized 3-day/2-night program for cosmetics and skincare brands including K-beauty market insights, regulatory compliance, and beauty factory tour with cost optimization consultation.</p>
                         <div class="offer-price">
-                            <span class="sale-price">Negotiable</span>
+                            <span class="sale-price" data-translate="negotiable">Negotiable</span>
                             <span class="price-note">2D/3N program • based on group size • negotiable</span>
                         </div>
                         <div class="offer-features">
@@ -2055,7 +2098,7 @@
                             <span class="feature">✓ Factory Tours</span>
                             <span class="feature">✓ Cost Optimization</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
 
@@ -2065,8 +2108,8 @@
                         <div class="offer-badge">Essential</div>
                     </div>
                     <div class="offer-content">
-                        <h3>Korean Language & Culture Consulting</h3>
-                        <p>Comprehensive cultural adaptation service including brand messaging, customer communication strategies, and cultural sensitivity training for successful market integration.</p>
+                        <h3 data-translate="offer_culture_title">Korean Language & Culture Consulting</h3>
+                        <p data-translate="offer_culture_desc">Comprehensive cultural adaptation service including brand messaging, customer communication strategies, and cultural sensitivity training for successful market integration.</p>
                         <div class="offer-price">
                             <span class="original-price">$3,000</span>
                             <span class="sale-price">$2,400</span>
@@ -2076,7 +2119,7 @@
                             <span class="feature">✓ Brand Messaging</span>
                             <span class="feature">✓ Communication Strategy</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
 
@@ -2086,8 +2129,8 @@
                         <div class="offer-badge">Premium</div>
                     </div>
                     <div class="offer-content">
-                        <h3>Premium Medical Guide Service</h3>
-                        <p>Professional medical guide service for Seoul National University and Yonsei University hospitals including appointment scheduling, translation, and comprehensive care coordination.</p>
+                        <h3 data-translate="offer_medical_title">Premium Medical Guide Service</h3>
+                        <p data-translate="offer_medical_desc">Professional medical guide service for Seoul National University and Yonsei University hospitals including appointment scheduling, translation, and comprehensive care coordination.</p>
                         <div class="offer-price">
                             <span class="original-price">$1,800</span>
                             <span class="sale-price">$1,440</span>
@@ -2097,7 +2140,7 @@
                             <span class="feature">✓ Medical Translation</span>
                             <span class="feature">✓ Care Coordination</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
 
@@ -2107,10 +2150,10 @@
                         <div class="offer-badge">VIP</div>
                     </div>
                     <div class="offer-content">
-                        <h3>VIP Business Visitor Custom Service</h3>
-                        <p>One-stop premium 3-day/4-night service for trade and business visitors including airport pickup, luxury accommodation, business meeting arrangements, and complete ground transportation.</p>
+                        <h3 data-translate="offer_vip_title">VIP Business Visitor Custom Service</h3>
+                        <p data-translate="offer_vip_desc">One-stop premium 3-day/4-night service for trade and business visitors including airport pickup, luxury accommodation, business meeting arrangements, and complete ground transportation.</p>
                         <div class="offer-price">
-                            <span class="sale-price">Negotiable</span>
+                            <span class="sale-price" data-translate="negotiable">Negotiable</span>
                             <span class="price-note">3D/4N program • based on requirements • negotiable</span>
                         </div>
                         <div class="offer-features">
@@ -2118,7 +2161,7 @@
                             <span class="feature">✓ Business Meetings</span>
                             <span class="feature">✓ Premium Transport</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
 
@@ -2128,10 +2171,10 @@
                         <div class="offer-badge">Exclusive</div>
                     </div>
                     <div class="offer-content">
-                        <h3>Beauty Factory Tour & Quotation Service</h3>
-                        <p>Guided 2-day/3-night visits to Korean beauty manufacturing facilities with live quotation sessions, production planning consultation, and cost reduction strategy discussions.</p>
+                        <h3 data-translate="offer_factory_title">Beauty Factory Tour & Quotation Service</h3>
+                        <p data-translate="offer_factory_desc">Guided 2-day/3-night visits to Korean beauty manufacturing facilities with live quotation sessions, production planning consultation, and cost reduction strategy discussions.</p>
                         <div class="offer-price">
-                            <span class="sale-price">Variable</span>
+                            <span class="sale-price" data-translate="variable">Variable</span>
                             <span class="price-note">2D/3N program • per factory visit • negotiable</span>
                         </div>
                         <div class="offer-features">
@@ -2139,7 +2182,7 @@
                             <span class="feature">✓ Live Quotations</span>
                             <span class="feature">✓ Cost Reduction Tips</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
 
@@ -2149,8 +2192,8 @@
                         <div class="offer-badge">Guaranteed</div>
                     </div>
                     <div class="offer-content">
-                        <h3>Market Research & Item Sourcing Service</h3>
-                        <p>Comprehensive 8-week program with hands-on factory visits to negotiate the best possible pricing. We walk the factories to find you the optimal cost solutions. Full refund if unsuccessful.</p>
+                        <h3 data-translate="offer_research_title">Market Research & Item Sourcing Service</h3>
+                        <p data-translate="offer_research_desc">Comprehensive 8-week program with hands-on factory visits to negotiate the best possible pricing. We walk the factories to find you the optimal cost solutions. Full refund if unsuccessful.</p>
                         <div class="offer-price">
                             <span class="original-price">$4,900</span>
                             <span class="sale-price">$2,900</span>
@@ -2160,14 +2203,14 @@
                             <span class="feature">✓ Factory Negotiations</span>
                             <span class="feature">✓ 100% Money Back Guarantee</span>
                         </div>
-                        <button class="offer-btn">Learn More</button>
+                        <button class="offer-btn" data-translate="learn_more">Learn More</button>
                     </div>
                 </div>
             </div>
 
             <div class="offers-cta fade-in-up">
-                <p class="cta-text">All seasonal offers are valid until October 31, 2025. Contact us to discuss your specific needs and get started today!</p>
-                <a href="#contact" class="btn btn-primary">Get Your Custom Quote</a>
+                <p class="cta-text" data-translate="season_cta_text">All seasonal offers are valid until October 31, 2025. Contact us to discuss your specific needs and get started today!</p>
+                <a href="#contact" class="btn btn-primary" data-translate="season_cta_btn">Get Your Custom Quote</a>
             </div>
         </div>
     </section>
@@ -2364,26 +2407,26 @@
 
     <section id="contact" class="contact section">
         <div class="container">
-            <h2 class="section-title fade-in-up">Start Your Korean Market Journey</h2>
-            <p class="section-subtitle fade-in-up">Ready to expand your business to Korea? Let's discuss your goals and create a customized market entry strategy.</p>
+            <h2 class="section-title fade-in-up" data-translate="contact_title">Start Your Korean Market Journey</h2>
+            <p class="section-subtitle fade-in-up" data-translate="contact_subtitle">Ready to expand your business to Korea? Let's discuss your goals and create a customized market entry strategy.</p>
             <div class="contact-content">
                 <div class="contact-form fade-in-up">
-                    <h3>Request a Free Market Test</h3>
+                    <h3 data-translate="contact_form_title">Request a Free Market Test</h3>
                     <form action="https://docs.google.com/forms/d/e/1FAIpQLSeGI4NhkO-o22lKZBUjErSJXDcc2HiIgeaCi_BG-7IfSNooNg/formResponse" method="post" id="contact-form-submit">
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name" data-translate="contact_form_name">Name</label>
                             <input type="text" id="name" name="entry.1563196953" required>
                         </div>
                         <div class="form-group">
-                            <label for="company">Company</label>
+                            <label for="company" data-translate="contact_form_company">Company</label>
                             <input type="text" id="company" name="entry.2024278864" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email" data-translate="contact_form_email">Email</label>
                             <input type="email" id="email" name="entry.1741471290" required>
                         </div>
                         <div class="form-group">
-                            <label for="product-type">Product Type</label>
+                            <label for="product-type" data-translate="contact_form_product">Product Type</label>
                             <select id="product-type" name="entry.1323199226" required>
                                 <option value="">Select Product Category</option>
                                 <option value="Beauty & Cosmetics">Beauty & Cosmetics</option>
@@ -2396,10 +2439,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="inquiry">Your Inquiry</label>
+                            <label for="inquiry" data-translate="contact_form_inquiry">Your Inquiry</label>
                             <textarea id="inquiry" name="entry.666704390" rows="4" placeholder="Example: Hello, I'm John from SAMSONG Electronics. We manufacture premium consumer electronics and are interested in entering the Korean market. We would like to test our latest smartphone accessories through your platform. Could you provide information about market entry strategies, required certifications, and potential partnership opportunities? We're particularly interested in understanding Korean consumer preferences and the most effective sales channels for our products."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Request Free Consultation</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-translate="contact_form_btn">Request Free Consultation</button>
                     </form>
                 </div>
                 <div class="contact-info-section fade-in-up">
@@ -2436,11 +2479,616 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Phluto | Korea Market Entry Agency. All rights reserved. | Connecting Global Brands with Korean Success</p>
+            <p data-translate="footer_text">&copy; 2025 Phluto | Korea Market Entry Agency. All rights reserved. | Connecting Global Brands with Korean Success</p>
         </div>
     </footer>
 
     <script>
+        // Translation Data
+        const translations = {
+            en: {
+                // Header
+                nav_home: "Home",
+                nav_about: "About",
+                nav_services: "Services",
+                nav_process: "Process",
+                nav_portfolio: "Portfolio",
+                nav_contact: "Contact",
+                
+                // Hero Section
+                hero_title: "Your Trusted Partner for Korean Market Entry",
+                hero_subtitle: "Global Brands. Local Execution.",
+                hero_tagline: "Connecting international manufacturers with Korean consumers through proven market entry strategies, local expertise, and data-driven results.",
+                hero_btn_primary: "Get Started",
+                hero_btn_secondary: "Request a Sample",
+                
+                // About Section
+                about_title: "About Jay Jung",
+                about_subtitle: "Your dedicated partner for successful Korean market expansion",
+                about_contact_title: "Contact Information",
+                about_contact_name: "Name:",
+                about_contact_email: "Email:",
+                about_contact_company: "Company:",
+                about_main_title: "Bridging Global Innovation with Korean Market Success",
+                about_description_1: "I help international brands enter the Korean market through tailored product sourcing, e-commerce setup, logistics, and influencer marketing. With extensive experience in cross-border trade and deep understanding of local consumer trends, I connect manufacturers with real Korean customers.",
+                about_description_2: "My comprehensive approach combines market research, strategic planning, and hands-on execution to ensure your products not only enter the Korean market but thrive in it. From initial market testing to full-scale distribution, I provide end-to-end support for sustainable growth.",
+                
+                // Activity Banner
+                activity_title: "Our Work in Action",
+                activity_subtitle: "Real partnerships, real results in Korean market entry",
+                
+                // Services Section
+                services_title: "Service Offerings",
+                services_subtitle: "Comprehensive solutions for Korean market success",
+                
+                // Season Offers
+                season_title: "What We Offer This Season in 2025",
+                season_subtitle: "Limited-time opportunities and exclusive services for Korean market entry",
+                season_cta_text: "All seasonal offers are valid until October 31, 2025. Contact us to discuss your specific needs and get started today!",
+                season_cta_btn: "Get Your Custom Quote",
+                
+                // Process Section
+                process_title: "Our Process",
+                process_subtitle: "A proven 4-step approach to Korean market success",
+                
+                // Contact Section
+                contact_title: "Start Your Korean Market Journey",
+                contact_subtitle: "Ready to expand your business to Korea? Let's discuss your goals and create a customized market entry strategy.",
+                contact_form_title: "Request a Free Market Test",
+                contact_form_name: "Name",
+                contact_form_company: "Company",
+                contact_form_email: "Email",
+                contact_form_product: "Product Type",
+                contact_form_inquiry: "Your Inquiry",
+                contact_form_btn: "Request Free Consultation",
+                
+                // Footer
+                footer_text: "© 2025 Phluto | Korea Market Entry Agency. All rights reserved. | Connecting Global Brands with Korean Success",
+                
+                // Services Cards
+                service_sourcing_title: "Product Sourcing",
+                service_sourcing_desc: "Strategic product selection and supplier verification tailored to Korean market preferences and regulations.",
+                service_marketplace_title: "Marketplace Entry",
+                service_marketplace_desc: "Complete setup and optimization on major Korean platforms including Coupang, Naver Shopping, and 11Street.",
+                service_listing_title: "Product Listing & Translation",
+                service_listing_desc: "Professional Korean localization and SEO-optimized product descriptions that convert browsers into buyers.",
+                service_testing_title: "Test Sales & Feedback",
+                service_testing_desc: "Small-scale market testing with real customer feedback to optimize products before full launch.",
+                service_marketing_title: "SNS/Influencer Marketing",
+                service_marketing_desc: "Strategic social media campaigns and influencer partnerships to build brand awareness and drive sales.",
+                service_logistics_title: "Local CS & Logistics",
+                service_logistics_desc: "Comprehensive customer service and fulfillment solutions to ensure smooth operations and customer satisfaction.",
+                service_analysis_title: "Competitor Analysis",
+                service_analysis_desc: "In-depth market research and competitive intelligence to position your products for maximum impact.",
+                
+                // Process Steps
+                process_step1_title: "Inquiry & Consultation",
+                process_step1_desc: "Comprehensive market analysis and strategy development tailored to your product and goals.",
+                process_step2_title: "Product Sample & Market Test",
+                process_step2_desc: "Small-scale testing with real Korean consumers to validate demand and optimize positioning.",
+                process_step3_title: "Feedback & Local Optimization",
+                process_step3_desc: "Product refinement and localization based on market response and consumer insights.",
+                process_step4_title: "Full-scale Distribution & Marketing",
+                process_step4_desc: "Complete market launch with ongoing support, marketing, and performance optimization.",
+                
+                // Special Offers
+                offer_ecommerce_title: "Korean E-commerce Setup Special",
+                offer_ecommerce_desc: "Complete marketplace integration with Coupang, Naver, and 11Street including professional product photography and Korean translation.",
+                offer_influencer_title: "Influencer Marketing Package",
+                offer_influencer_desc: "3-month campaign with top Korean influencers in your niche, including content creation, posting schedule, and performance tracking.",
+                offer_fasttrack_title: "Fast-Track Market Entry",
+                offer_fasttrack_desc: "Accelerated 30-day market entry program with expedited customs, priority platform approval, and dedicated support.",
+                offer_beauty_title: "Beauty Brand Specialist Package",
+                offer_beauty_desc: "Specialized 3-day/2-night program for cosmetics and skincare brands including K-beauty market insights, regulatory compliance, and beauty factory tour with cost optimization consultation.",
+                offer_culture_title: "Korean Language & Culture Consulting",
+                offer_culture_desc: "Comprehensive cultural adaptation service including brand messaging, customer communication strategies, and cultural sensitivity training for successful market integration.",
+                offer_medical_title: "Premium Medical Guide Service",
+                offer_medical_desc: "Professional medical guide service for Seoul National University and Yonsei University hospitals including appointment scheduling, translation, and comprehensive care coordination.",
+                offer_vip_title: "VIP Business Visitor Custom Service",
+                offer_vip_desc: "One-stop premium 3-day/4-night service for trade and business visitors including airport pickup, luxury accommodation, business meeting arrangements, and complete ground transportation.",
+                offer_factory_title: "Beauty Factory Tour & Quotation Service",
+                offer_factory_desc: "Guided 2-day/3-night visits to Korean beauty manufacturing facilities with live quotation sessions, production planning consultation, and cost reduction strategy discussions.",
+                offer_research_title: "Market Research & Item Sourcing Service",
+                offer_research_desc: "Comprehensive 8-week program with hands-on factory visits to negotiate the best possible pricing. We walk the factories to find you the optimal cost solutions. Full refund if unsuccessful.",
+                
+                // Common UI
+                learn_more: "Learn More",
+                timeline: "Timeline:",
+                whats_included: "What's Included:",
+                negotiable: "Negotiable",
+                variable: "Variable"
+            },
+            
+            ko: {
+                // Header
+                nav_home: "홈",
+                nav_about: "소개",
+                nav_services: "서비스",
+                nav_process: "프로세스",
+                nav_portfolio: "포트폴리오",
+                nav_contact: "연락처",
+                
+                // Hero Section
+                hero_title: "한국 시장 진출을 위한 신뢰할 수 있는 파트너",
+                hero_subtitle: "글로벌 브랜드. 로컬 실행.",
+                hero_tagline: "검증된 시장 진출 전략, 현지 전문성, 데이터 기반 결과를 통해 해외 제조업체와 한국 소비자를 연결합니다.",
+                hero_btn_primary: "시작하기",
+                hero_btn_secondary: "샘플 요청",
+                
+                // About Section
+                about_title: "정재영 소개",
+                about_subtitle: "성공적인 한국 시장 확장을 위한 전담 파트너",
+                about_contact_title: "연락처 정보",
+                about_contact_name: "이름:",
+                about_contact_email: "이메일:",
+                about_contact_company: "회사:",
+                about_main_title: "글로벌 혁신과 한국 시장 성공을 연결하다",
+                about_description_1: "맞춤형 제품 소싱, 전자상거래 설정, 물류, 인플루언서 마케팅을 통해 해외 브랜드의 한국 시장 진출을 돕습니다. 국경 간 무역에 대한 광범위한 경험과 현지 소비자 트렌드에 대한 깊은 이해를 바탕으로 제조업체와 실제 한국 고객을 연결합니다.",
+                about_description_2: "시장 조사, 전략적 계획, 실무 실행을 결합한 포괄적인 접근 방식을 통해 귀하의 제품이 한국 시장에 진출할 뿐만 아니라 성공할 수 있도록 보장합니다. 초기 시장 테스트부터 본격적인 유통까지 지속 가능한 성장을 위한 종합적인 지원을 제공합니다.",
+                
+                // Activity Banner
+                activity_title: "우리의 실제 업무",
+                activity_subtitle: "한국 시장 진출에서의 실제 파트너십과 실제 결과",
+                
+                // Services Section
+                services_title: "서비스 제공",
+                services_subtitle: "한국 시장 성공을 위한 종합 솔루션",
+                
+                // Season Offers
+                season_title: "2025년 시즌 특별 제안",
+                season_subtitle: "한국 시장 진출을 위한 한정 기회 및 독점 서비스",
+                season_cta_text: "모든 시즌 제안은 2025년 10월 31일까지 유효합니다. 귀하의 특별한 요구사항을 논의하고 오늘 시작하려면 연락하세요!",
+                season_cta_btn: "맞춤 견적 받기",
+                
+                // Process Section
+                process_title: "우리의 프로세스",
+                process_subtitle: "한국 시장 성공을 위한 검증된 4단계 접근법",
+                
+                // Contact Section
+                contact_title: "한국 시장 여정을 시작하세요",
+                contact_subtitle: "한국으로 사업을 확장할 준비가 되셨나요? 귀하의 목표에 대해 논의하고 맞춤형 시장 진출 전략을 수립해보세요.",
+                contact_form_title: "무료 시장 테스트 요청",
+                contact_form_name: "이름",
+                contact_form_company: "회사명",
+                contact_form_email: "이메일",
+                contact_form_product: "제품 유형",
+                contact_form_inquiry: "문의사항",
+                contact_form_btn: "무료 상담 요청",
+                
+                // Footer
+                footer_text: "© 2025 Phluto | 한국 시장 진출 에이전시. 모든 권리 보유. | 글로벌 브랜드와 한국 성공을 연결",
+                
+                // Services Cards
+                service_sourcing_title: "제품 소싱",
+                service_sourcing_desc: "한국 시장 선호도와 규정에 맞춘 전략적 제품 선택 및 공급업체 검증.",
+                service_marketplace_title: "마켓플레이스 진출",
+                service_marketplace_desc: "쿠팡, 네이버 쇼핑, 11번가 등 주요 한국 플랫폼에서의 완전한 설정 및 최적화.",
+                service_listing_title: "제품 등록 및 번역",
+                service_listing_desc: "브라우저를 구매자로 전환하는 전문적인 한국어 현지화 및 SEO 최적화된 제품 설명.",
+                service_testing_title: "테스트 판매 및 피드백",
+                service_testing_desc: "본격 출시 전 제품 최적화를 위한 실제 고객 피드백을 통한 소규모 시장 테스트.",
+                service_marketing_title: "SNS/인플루언서 마케팅",
+                service_marketing_desc: "브랜드 인지도 구축과 판매 촉진을 위한 전략적 소셜 미디어 캠페인 및 인플루언서 파트너십.",
+                service_logistics_title: "현지 CS 및 물류",
+                service_logistics_desc: "원활한 운영과 고객 만족을 보장하는 종합적인 고객 서비스 및 풀필먼트 솔루션.",
+                service_analysis_title: "경쟁사 분석",
+                service_analysis_desc: "최대 임팩트를 위한 제품 포지셔닝을 위한 심층 시장 조사 및 경쟁 인텔리전스.",
+                
+                // Process Steps
+                process_step1_title: "문의 및 상담",
+                process_step1_desc: "귀하의 제품과 목표에 맞춘 종합적인 시장 분석 및 전략 개발.",
+                process_step2_title: "제품 샘플 및 시장 테스트",
+                process_step2_desc: "수요 검증과 포지셔닝 최적화를 위한 실제 한국 소비자와의 소규모 테스트.",
+                process_step3_title: "피드백 및 현지 최적화",
+                process_step3_desc: "시장 반응과 소비자 인사이트를 바탕으로 한 제품 개선 및 현지화.",
+                process_step4_title: "본격적인 유통 및 마케팅",
+                process_step4_desc: "지속적인 지원, 마케팅, 성과 최적화를 통한 완전한 시장 출시.",
+                
+                // Special Offers
+                offer_ecommerce_title: "한국 이커머스 설정 스페셜",
+                offer_ecommerce_desc: "전문 제품 사진 촬영과 한국어 번역을 포함한 쿠팡, 네이버, 11번가 완전 통합.",
+                offer_influencer_title: "인플루언서 마케팅 패키지",
+                offer_influencer_desc: "콘텐츠 제작, 포스팅 일정, 성과 추적을 포함한 귀하의 분야 최고 한국 인플루언서와의 3개월 캠페인.",
+                offer_fasttrack_title: "빠른 시장 진출",
+                offer_fasttrack_desc: "신속한 통관, 우선 플랫폼 승인, 전담 지원을 통한 가속화된 30일 시장 진출 프로그램.",
+                offer_beauty_title: "뷰티 브랜드 전문 패키지",
+                offer_beauty_desc: "K-뷰티 시장 인사이트, 규제 준수, 비용 최적화 컨설팅을 포함한 뷰티 공장 투어가 있는 화장품 및 스킨케어 브랜드를 위한 전문 2박3일 프로그램.",
+                offer_culture_title: "한국어 문화 컨설팅",
+                offer_culture_desc: "성공적인 시장 통합을 위한 브랜드 메시징, 고객 커뮤니케이션 전략, 문화적 민감성 교육을 포함한 종합적인 문화 적응 서비스.",
+                offer_medical_title: "프리미엄 의료 가이드 서비스",
+                offer_medical_desc: "예약 일정 관리, 통역, 종합적인 케어 코디네이션을 포함한 서울대학교 및 연세대학교 병원 전문 의료 가이드 서비스.",
+                offer_vip_title: "VIP 비즈니스 방문자 맞춤 서비스",
+                offer_vip_desc: "공항 픽업, 럭셔리 숙박, 비즈니스 미팅 주선, 완전한 지상 교통을 포함한 무역 및 비즈니스 방문자를 위한 원스톱 프리미엄 3박4일 서비스.",
+                offer_factory_title: "뷰티 공장 투어 및 견적 서비스",
+                offer_factory_desc: "실시간 견적 세션, 생산 계획 컨설팅, 비용 절감 전략 논의를 통한 한국 뷰티 제조 시설 가이드 2박3일 방문.",
+                offer_research_title: "시장 조사 및 아이템 소싱 서비스",
+                offer_research_desc: "최적의 가격 협상을 위한 직접 공장 방문이 포함된 종합 8주 프로그램. 최적의 비용 솔루션을 찾기 위해 공장을 직접 발품팔아 드립니다. 실패 시 전액 환불.",
+                
+                // Common UI
+                learn_more: "자세히 보기",
+                timeline: "타임라인:",
+                whats_included: "포함 사항:",
+                negotiable: "협의 가능",
+                variable: "변동"
+            },
+            
+            zh: {
+                // Header
+                nav_home: "首页",
+                nav_about: "关于我们",
+                nav_services: "服务",
+                nav_process: "流程",
+                nav_portfolio: "案例",
+                nav_contact: "联系我们",
+                
+                // Hero Section
+                hero_title: "您进入韩国市场的可信赖合作伙伴",
+                hero_subtitle: "全球品牌，本地执行。",
+                hero_tagline: "通过经过验证的市场进入策略、本地专业知识和数据驱动的结果，连接国际制造商与韩国消费者。",
+                hero_btn_primary: "开始合作",
+                hero_btn_secondary: "申请样品",
+                
+                // About Section
+                about_title: "关于郑载英",
+                about_subtitle: "您成功拓展韩国市场的专业合作伙伴",
+                about_contact_title: "联系信息",
+                about_contact_name: "姓名：",
+                about_contact_email: "邮箱：",
+                about_contact_company: "公司：",
+                about_main_title: "连接全球创新与韩国市场成功",
+                about_description_1: "我通过定制化产品采购、电商设置、物流和网红营销帮助国际品牌进入韩国市场。凭借丰富的跨境贸易经验和对当地消费者趋势的深入了解，我连接制造商与真正的韩国客户。",
+                about_description_2: "我的综合方法结合了市场研究、战略规划和实际执行，确保您的产品不仅进入韩国市场，更在其中蓬勃发展。从初期市场测试到全面分销，我为可持续增长提供端到端支持。",
+                
+                // Activity Banner
+                activity_title: "我们的实际工作",
+                activity_subtitle: "韩国市场进入中的真实合作伙伴关系和真实结果",
+                
+                // Services Section
+                services_title: "服务项目",
+                services_subtitle: "韩国市场成功的综合解决方案",
+                
+                // Season Offers
+                season_title: "2025年季节特惠",
+                season_subtitle: "韩国市场进入的限时机会和专属服务",
+                season_cta_text: "所有季节优惠活动有效期至2025年10月31日。联系我们讨论您的具体需求并立即开始！",
+                season_cta_btn: "获取定制报价",
+                
+                // Process Section
+                process_title: "我们的流程",
+                process_subtitle: "韩国市场成功的经验证4步方法",
+                
+                // Contact Section
+                contact_title: "开始您的韩国市场之旅",
+                contact_subtitle: "准备将您的业务扩展到韩国了吗？让我们讨论您的目标并制定定制化市场进入策略。",
+                contact_form_title: "申请免费市场测试",
+                contact_form_name: "姓名",
+                contact_form_company: "公司",
+                contact_form_email: "邮箱",
+                contact_form_product: "产品类型",
+                contact_form_inquiry: "您的咨询",
+                contact_form_btn: "申请免费咨询",
+                
+                // Footer
+                footer_text: "© 2025 Phluto | 韩国市场进入代理公司。保留所有权利。| 连接全球品牌与韩国成功",
+                
+                // Services Cards
+                service_sourcing_title: "产品采购",
+                service_sourcing_desc: "针对韩国市场偏好和法规的战略性产品选择和供应商验证。",
+                service_marketplace_title: "市场进入",
+                service_marketplace_desc: "在Coupang、Naver购物和11Street等主要韩国平台上的完整设置和优化。",
+                service_listing_title: "产品列表和翻译",
+                service_listing_desc: "专业的韩语本地化和SEO优化的产品描述，将浏览者转化为买家。",
+                service_testing_title: "测试销售和反馈",
+                service_testing_desc: "通过真实客户反馈进行小规模市场测试，在全面推出前优化产品。",
+                service_marketing_title: "社交媒体/网红营销",
+                service_marketing_desc: "战略性社交媒体活动和网红合作伙伴关系，建立品牌知名度并推动销售。",
+                service_logistics_title: "本地客服和物流",
+                service_logistics_desc: "全面的客户服务和履约解决方案，确保顺畅运营和客户满意度。",
+                service_analysis_title: "竞争对手分析",
+                service_analysis_desc: "深入的市场研究和竞争情报，为您的产品定位以获得最大影响。",
+                
+                // Process Steps
+                process_step1_title: "咨询和顾问",
+                process_step1_desc: "针对您的产品和目标量身定制的全面市场分析和战略制定。",
+                process_step2_title: "产品样品和市场测试",
+                process_step2_desc: "通过真实韩国消费者进行小规模测试，验证需求并优化定位。",
+                process_step3_title: "反馈和本地优化",
+                process_step3_desc: "基于市场反应和消费者洞察的产品改进和本地化。",
+                process_step4_title: "全面分销和营销",
+                process_step4_desc: "通过持续支持、营销和性能优化实现完整的市场推出。",
+                
+                // Special Offers
+                offer_ecommerce_title: "韩国电商设置特惠",
+                offer_ecommerce_desc: "包括专业产品摄影和韩语翻译的Coupang、Naver和11Street完整市场整合。",
+                offer_influencer_title: "网红营销套餐",
+                offer_influencer_desc: "与您领域顶级韩国网红的3个月活动，包括内容创作、发布计划和性能跟踪。",
+                offer_fasttrack_title: "快速市场进入",
+                offer_fasttrack_desc: "通过加速清关、优先平台审批和专门支持的加速30天市场进入计划。",
+                offer_beauty_title: "美容品牌专家套餐",
+                offer_beauty_desc: "为化妆品和护肤品牌提供的专业2晚3天计划，包括K-美容市场洞察、法规合规和美容工厂参观与成本优化咨询。",
+                offer_culture_title: "韩语文化咨询",
+                offer_culture_desc: "包括品牌信息传递、客户沟通策略和文化敏感性培训的全面文化适应服务，确保成功的市场整合。",
+                offer_medical_title: "高端医疗指导服务",
+                offer_medical_desc: "为首尔国立大学和延世大学医院提供专业医疗指导服务，包括预约安排、翻译和全面护理协调。",
+                offer_vip_title: "VIP商务访客定制服务",
+                offer_vip_desc: "为贸易和商务访客提供的一站式高端3晚4天服务，包括机场接送、豪华住宿、商务会议安排和完整地面交通。",
+                offer_factory_title: "美容工厂参观和报价服务",
+                offer_factory_desc: "通过现场报价会议、生产规划咨询和成本削减策略讨论，指导参观韩国美容制造设施的2晚3天行程。",
+                offer_research_title: "市场研究和产品采购服务",
+                offer_research_desc: "包含亲自工厂访问以协商最佳价格的综合8周计划。我们亲自走访工厂为您找到最优成本解决方案。如果不成功则全额退款。",
+                
+                // Common UI
+                learn_more: "了解更多",
+                timeline: "时间线：",
+                whats_included: "包含内容：",
+                negotiable: "可协商",
+                variable: "可变"
+            },
+            
+            vi: {
+                // Header
+                nav_home: "Trang chủ",
+                nav_about: "Giới thiệu",
+                nav_services: "Dịch vụ",
+                nav_process: "Quy trình",
+                nav_portfolio: "Dự án",
+                nav_contact: "Liên hệ",
+                
+                // Hero Section
+                hero_title: "Đối tác đáng tin cậy cho việc thâm nhập thị trường Hàn Quốc",
+                hero_subtitle: "Thương hiệu toàn cầu. Thực thi địa phương.",
+                hero_tagline: "Kết nối các nhà sản xuất quốc tế với người tiêu dùng Hàn Quốc thông qua các chiến lược thâm nhập thị trường đã được chứng minh, chuyên môn địa phương và kết quả dựa trên dữ liệu.",
+                hero_btn_primary: "Bắt đầu",
+                hero_btn_secondary: "Yêu cầu mẫu",
+                
+                // About Section
+                about_title: "Giới thiệu Jay Jung",
+                about_subtitle: "Đối tác chuyên dụng cho việc mở rộng thị trường Hàn Quốc thành công",
+                about_contact_title: "Thông tin liên hệ",
+                about_contact_name: "Tên:",
+                about_contact_email: "Email:",
+                about_contact_company: "Công ty:",
+                about_main_title: "Kết nối đổi mới toàn cầu với thành công thị trường Hàn Quốc",
+                about_description_1: "Tôi giúp các thương hiệu quốc tế thâm nhập thị trường Hàn Quốc thông qua tìm nguồn sản phẩm tùy chỉnh, thiết lập thương mại điện tử, logistics và marketing influencer. Với kinh nghiệm phong phú trong thương mại xuyên biên giới và hiểu biết sâu sắc về xu hướng người tiêu dùng địa phương, tôi kết nối các nhà sản xuất với khách hàng Hàn Quốc thực sự.",
+                about_description_2: "Phương pháp toàn diện của tôi kết hợp nghiên cứu thị trường, lập kế hoạch chiến lược và thực thi thực tế để đảm bảo sản phẩm của bạn không chỉ thâm nhập thị trường Hàn Quốc mà còn phát triển mạnh. Từ thử nghiệm thị trường ban đầu đến phân phối quy mô lớn, tôi cung cấp hỗ trợ toàn diện cho tăng trưởng bền vững.",
+                
+                // Activity Banner
+                activity_title: "Công việc thực tế của chúng tôi",
+                activity_subtitle: "Quan hệ đối tác thực sự, kết quả thực sự trong việc thâm nhập thị trường Hàn Quốc",
+                
+                // Services Section
+                services_title: "Dịch vụ cung cấp",
+                services_subtitle: "Giải pháp toàn diện cho thành công thị trường Hàn Quốc",
+                
+                // Season Offers
+                season_title: "Ưu đãi mùa 2025",
+                season_subtitle: "Cơ hội có thời hạn và dịch vụ độc quyền cho việc thâm nhập thị trường Hàn Quốc",
+                season_cta_text: "Tất cả ưu đãi theo mùa có hiệu lực đến ngày 31 tháng 10 năm 2025. Liên hệ với chúng tôi để thảo luận về nhu cầu cụ thể của bạn và bắt đầu ngay hôm nay!",
+                season_cta_btn: "Nhận báo giá tùy chỉnh",
+                
+                // Process Section
+                process_title: "Quy trình của chúng tôi",
+                process_subtitle: "Phương pháp 4 bước đã được chứng minh cho thành công thị trường Hàn Quốc",
+                
+                // Contact Section
+                contact_title: "Bắt đầu hành trình thị trường Hàn Quốc của bạn",
+                contact_subtitle: "Sẵn sàng mở rộng doanh nghiệp của bạn sang Hàn Quốc? Hãy thảo luận về mục tiêu của bạn và tạo ra chiến lược thâm nhập thị trường tùy chỉnh.",
+                contact_form_title: "Yêu cầu thử nghiệm thị trường miễn phí",
+                contact_form_name: "Tên",
+                contact_form_company: "Công ty",
+                contact_form_email: "Email",
+                contact_form_product: "Loại sản phẩm",
+                contact_form_inquiry: "Câu hỏi của bạn",
+                contact_form_btn: "Yêu cầu tư vấn miễn phí",
+                
+                // Footer
+                footer_text: "© 2025 Phluto | Đại lý thâm nhập thị trường Hàn Quốc. Tất cả quyền được bảo lưu. | Kết nối thương hiệu toàn cầu với thành công Hàn Quốc",
+                
+                // Services Cards
+                service_sourcing_title: "Tìm nguồn sản phẩm",
+                service_sourcing_desc: "Lựa chọn sản phẩm chiến lược và xác minh nhà cung cấp phù hợp với sở thích và quy định thị trường Hàn Quốc.",
+                service_marketplace_title: "Gia nhập thị trường",
+                service_marketplace_desc: "Thiết lập và tối ưu hóa hoàn chỉnh trên các nền tảng Hàn Quốc chính bao gồm Coupang, Naver Shopping và 11Street.",
+                service_listing_title: "Niêm yết sản phẩm & Dịch thuật",
+                service_listing_desc: "Bản địa hóa tiếng Hàn chuyên nghiệp và mô tả sản phẩm được tối ưu hóa SEO để chuyển đổi người duyệt thành người mua.",
+                service_testing_title: "Bán thử nghiệm & Phản hồi",
+                service_testing_desc: "Thử nghiệm thị trường quy mô nhỏ với phản hồi khách hàng thực để tối ưu hóa sản phẩm trước khi ra mắt toàn diện.",
+                service_marketing_title: "Marketing SNS/Influencer",
+                service_marketing_desc: "Chiến dịch truyền thông xã hội chiến lược và quan hệ đối tác influencer để xây dựng nhận thức thương hiệu và thúc đẩy doanh số.",
+                service_logistics_title: "Dịch vụ khách hàng & Logistics địa phương",
+                service_logistics_desc: "Giải pháp dịch vụ khách hàng và thực hiện toàn diện để đảm bảo hoạt động suôn sẻ và sự hài lòng của khách hàng.",
+                service_analysis_title: "Phân tích đối thủ cạnh tranh",
+                service_analysis_desc: "Nghiên cứu thị trường sâu và thông tin cạnh tranh để định vị sản phẩm của bạn để có tác động tối đa.",
+                
+                // Process Steps
+                process_step1_title: "Tư vấn & Hỗ trợ",
+                process_step1_desc: "Phân tích thị trường toàn diện và phát triển chiến lược phù hợp với sản phẩm và mục tiêu của bạn.",
+                process_step2_title: "Mẫu sản phẩm & Kiểm tra thị trường",
+                process_step2_desc: "Thử nghiệm quy mô nhỏ với người tiêu dùng Hàn Quốc thực để xác thực nhu cầu và tối ưu hóa định vị.",
+                process_step3_title: "Phản hồi & Tối ưu hóa địa phương",
+                process_step3_desc: "Cải thiện sản phẩm và bản địa hóa dựa trên phản hồi thị trường và hiểu biết người tiêu dùng.",
+                process_step4_title: "Phân phối & Marketing quy mô lớn",
+                process_step4_desc: "Ra mắt thị trường hoàn chỉnh với hỗ trợ liên tục, marketing và tối ưu hóa hiệu suất.",
+                
+                // Special Offers
+                offer_ecommerce_title: "Đặc biệt thiết lập thương mại điện tử Hàn Quốc",
+                offer_ecommerce_desc: "Tích hợp thị trường hoàn chỉnh với Coupang, Naver và 11Street bao gồm chụp ảnh sản phẩm chuyên nghiệp và dịch thuật tiếng Hàn.",
+                offer_influencer_title: "Gói Marketing Influencer",
+                offer_influencer_desc: "Chiến dịch 3 tháng với các influencer Hàn Quốc hàng đầu trong lĩnh vực của bạn, bao gồm tạo nội dung, lịch đăng bài và theo dõi hiệu suất.",
+                offer_fasttrack_title: "Gia nhập thị trường nhanh",
+                offer_fasttrack_desc: "Chương trình gia nhập thị trường 30 ngày được tăng tốc với thủ tục hải quan nhanh, phê duyệt nền tảng ưu tiên và hỗ trợ chuyên dụng.",
+                offer_beauty_title: "Gói chuyên gia thương hiệu làm đẹp",
+                offer_beauty_desc: "Chương trình chuyên nghiệp 2 đêm 3 ngày cho các thương hiệu mỹ phẩm và chăm sóc da bao gồm hiểu biết thị trường K-beauty, tuân thủ quy định và tham quan nhà máy làm đẹp với tư vấn tối ưu hóa chi phí.",
+                offer_culture_title: "Tư vấn ngôn ngữ & văn hóa Hàn Quốc",
+                offer_culture_desc: "Dịch vụ thích ứng văn hóa toàn diện bao gồm thông điệp thương hiệu, chiến lược giao tiếp khách hàng và đào tạo nhạy cảm văn hóa để tích hợp thị trường thành công.",
+                offer_medical_title: "Dịch vụ hướng dẫn y tế cao cấp",
+                offer_medical_desc: "Dịch vụ hướng dẫn y tế chuyên nghiệp cho bệnh viện Đại học Quốc gia Seoul và Đại học Yonsei bao gồm lên lịch hẹn, dịch thuật và điều phối chăm sóc toàn diện.",
+                offer_vip_title: "Dịch vụ tùy chỉnh khách thăm kinh doanh VIP",
+                offer_vip_desc: "Dịch vụ cao cấp một cửa 3 đêm 4 ngày cho khách thăm thương mại và kinh doanh bao gồm đón sân bay, lưu trú sang trọng, sắp xếp cuộc họp kinh doanh và vận chuyển mặt đất hoàn chỉnh.",
+                offer_factory_title: "Dịch vụ tham quan nhà máy làm đẹp & Báo giá",
+                offer_factory_desc: "Chuyến thăm có hướng dẫn 2 đêm 3 ngày đến các cơ sở sản xuất làm đẹp Hàn Quốc với các phiên báo giá trực tiếp, tư vấn kế hoạch sản xuất và thảo luận chiến lược giảm chi phí.",
+                offer_research_title: "Dịch vụ nghiên cứu thị trường & Tìm nguồn hàng",
+                offer_research_desc: "Chương trình toàn diện 8 tuần với các chuyến thăm nhà máy thực tế để đàm phán giá tốt nhất có thể. Chúng tôi đi khắp các nhà máy để tìm cho bạn các giải pháp chi phí tối ưu. Hoàn tiền đầy đủ nếu không thành công.",
+                
+                // Common UI
+                learn_more: "Tìm hiểu thêm",
+                timeline: "Thời gian:",
+                whats_included: "Bao gồm:",
+                negotiable: "Có thể thương lượng",
+                variable: "Biến đổi"
+            },
+            
+            ja: {
+                // Header
+                nav_home: "ホーム",
+                nav_about: "会社概要",
+                nav_services: "サービス",
+                nav_process: "プロセス",
+                nav_portfolio: "実績",
+                nav_contact: "お問い合わせ",
+                
+                // Hero Section
+                hero_title: "韓国市場参入の信頼できるパートナー",
+                hero_subtitle: "グローバルブランド、ローカル実行。",
+                hero_tagline: "実証済みの市場参入戦略、現地専門知識、データ駆動の結果を通じて、国際的な製造業者と韓国の消費者を結びつけます。",
+                hero_btn_primary: "始める",
+                hero_btn_secondary: "サンプル依頼",
+                
+                // About Section
+                about_title: "ジェイ・ジョンについて",
+                about_subtitle: "韓国市場拡大成功のための専任パートナー",
+                about_contact_title: "連絡先情報",
+                about_contact_name: "名前：",
+                about_contact_email: "メール：",
+                about_contact_company: "会社：",
+                about_main_title: "グローバルイノベーションと韓国市場成功の架け橋",
+                about_description_1: "カスタマイズされた商品調達、Eコマース設定、物流、インフルエンサーマーケティングを通じて、国際ブランドの韓国市場参入をサポートしています。国境を越えた貿易の豊富な経験と現地消費者トレンドの深い理解により、製造業者と実際の韓国顧客を結びつけます。",
+                about_description_2: "市場調査、戦略的計画、実践的実行を組み合わせた包括的なアプローチにより、お客様の製品が韓国市場に参入するだけでなく、その中で成長することを保証します。初期市場テストから本格的な流通まで、持続可能な成長のためのエンドツーエンドサポートを提供します。",
+                
+                // Activity Banner
+                activity_title: "私たちの実際の活動",
+                activity_subtitle: "韓国市場参入における実際のパートナーシップと実際の結果",
+                
+                // Services Section
+                services_title: "サービス提供",
+                services_subtitle: "韓国市場成功のための包括的ソリューション",
+                
+                // Season Offers
+                season_title: "2025年シーズン特別オファー",
+                season_subtitle: "韓国市場参入のための期間限定機会と独占サービス",
+                season_cta_text: "すべてのシーズンオファーは2025年10月31日まで有効です。具体的なニーズについて話し合い、今日から始めるために私たちにご連絡ください！",
+                season_cta_btn: "カスタム見積もりを取得",
+                
+                // Process Section
+                process_title: "私たちのプロセス",
+                process_subtitle: "韓国市場成功のための実証済み4段階アプローチ",
+                
+                // Contact Section
+                contact_title: "韓国市場への旅を始める",
+                contact_subtitle: "韓国への事業拡大の準備はできていますか？目標について話し合い、カスタマイズされた市場参入戦略を作成しましょう。",
+                contact_form_title: "無料市場テストのリクエスト",
+                contact_form_name: "名前",
+                contact_form_company: "会社名",
+                contact_form_email: "メール",
+                contact_form_product: "製品タイプ",
+                contact_form_inquiry: "お問い合わせ",
+                contact_form_btn: "無料相談をリクエスト",
+                
+                // Footer
+                footer_text: "© 2025 Phluto | 韓国市場参入エージェンシー。すべての権利を保有。| グローバルブランドと韓国の成功を結ぶ",
+                
+                // Services Cards
+                service_sourcing_title: "商品調達",
+                service_sourcing_desc: "韓国市場の嗜好と規制に合わせた戦略的商品選択とサプライヤー検証。",
+                service_marketplace_title: "マーケットプレイス参入",
+                service_marketplace_desc: "Coupang、ネイバーショッピング、11番街を含む主要韓国プラットフォームでの完全なセットアップと最適化。",
+                service_listing_title: "商品リスティングと翻訳",
+                service_listing_desc: "ブラウザを購入者に変換する専門的な韓国語ローカライゼーションとSEO最適化商品説明。",
+                service_testing_title: "テスト販売とフィードバック",
+                service_testing_desc: "本格展開前に商品を最適化するための実際の顧客フィードバックによる小規模市場テスト。",
+                service_marketing_title: "SNS/インフルエンサーマーケティング",
+                service_marketing_desc: "ブランド認知度構築と売上促進のための戦略的ソーシャルメディアキャンペーンとインフルエンサーパートナーシップ。",
+                service_logistics_title: "現地CS・物流",
+                service_logistics_desc: "スムーズな運営と顧客満足を確保する包括的なカスタマーサービスとフルフィルメントソリューション。",
+                service_analysis_title: "競合分析",
+                service_analysis_desc: "最大限のインパクトのための製品ポジショニングのための詳細な市場調査と競合インテリジェンス。",
+                
+                // Process Steps
+                process_step1_title: "お問い合わせ・相談",
+                process_step1_desc: "お客様の製品と目標に合わせた包括的な市場分析と戦略開発。",
+                process_step2_title: "商品サンプル・市場テスト",
+                process_step2_desc: "需要検証とポジショニング最適化のための実際の韓国消費者との小規模テスト。",
+                process_step3_title: "フィードバック・現地最適化",
+                process_step3_desc: "市場反応と消費者インサイトに基づく商品改善とローカライゼーション。",
+                process_step4_title: "本格流通・マーケティング",
+                process_step4_desc: "継続的なサポート、マーケティング、パフォーマンス最適化による完全な市場ローンチ。",
+                
+                // Special Offers
+                offer_ecommerce_title: "韓国Eコマース設定スペシャル",
+                offer_ecommerce_desc: "専門的な商品撮影と韓国語翻訳を含むCoupang、ネイバー、11番街の完全なマーケットプレイス統合。",
+                offer_influencer_title: "インフルエンサーマーケティングパッケージ",
+                offer_influencer_desc: "コンテンツ作成、投稿スケジュール、パフォーマンス追跡を含む、あなたのニッチ分野のトップ韓国インフルエンサーとの3ヶ月キャンペーン。",
+                offer_fasttrack_title: "ファストトラック市場参入",
+                offer_fasttrack_desc: "迅速な通関、優先プラットフォーム承認、専任サポートによる加速30日市場参入プログラム。",
+                offer_beauty_title: "美容ブランド専門パッケージ",
+                offer_beauty_desc: "K-ビューティ市場インサイト、規制遵守、コスト最適化コンサルティング付き美容工場見学を含む化粧品・スキンケアブランド向け専門2泊3日プログラム。",
+                offer_culture_title: "韓国語・文化コンサルティング",
+                offer_culture_desc: "成功的な市場統合のためのブランドメッセージング、顧客コミュニケーション戦略、文化的配慮トレーニングを含む包括的な文化適応サービス。",
+                offer_medical_title: "プレミアム医療ガイドサービス",
+                offer_medical_desc: "予約スケジューリング、通訳、包括的ケアコーディネーションを含むソウル大学校・延世大学校病院専門医療ガイドサービス。",
+                offer_vip_title: "VIPビジネス訪問者カスタムサービス",
+                offer_vip_desc: "空港送迎、高級宿泊、ビジネスミーティング手配、完全地上交通を含む貿易・ビジネス訪問者向けワンストッププレミアム3泊4日サービス。",
+                offer_factory_title: "美容工場見学・見積サービス",
+                offer_factory_desc: "ライブ見積セッション、生産計画コンサルティング、コスト削減戦略討議による韓国美容製造施設ガイド付き2泊3日訪問。",
+                offer_research_title: "市場調査・アイテム調達サービス",
+                offer_research_desc: "最適な価格交渉のための実際の工場訪問を含む包括的8週間プログラム。最適なコストソリューションを見つけるために工場を歩き回ります。不成功の場合は全額返金。",
+                
+                // Common UI
+                learn_more: "詳細を見る",
+                timeline: "タイムライン：",
+                whats_included: "含まれるもの：",
+                negotiable: "交渉可能",
+                variable: "変動"
+            }
+        };
+
+        // Translation Function
+        function translatePage(lang) {
+            const t = translations[lang];
+            if (!t) return;
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (t[key]) {
+                    if (element.tagName === 'BUTTON' && element.type === 'submit') {
+                        element.textContent = t[key];
+                    } else if (element.tagName === 'INPUT' && element.type === 'submit') {
+                        element.value = t[key];
+                    } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = t[key];
+                    } else {
+                        element.textContent = t[key];
+                    }
+                }
+            });
+
+            // Update document direction for RTL languages if needed
+            document.documentElement.lang = lang;
+
+            // Save language preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Initialize language from localStorage
+        function initializeLanguage() {
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            const option = document.querySelector(`[data-lang="${savedLang}"]`);
+            if (option) {
+                option.click();
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Language Selector Functionality
             const languageOptions = document.querySelectorAll('.language-option');
@@ -2463,13 +3111,13 @@
                     languageOptions.forEach(opt => opt.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Here you would typically trigger language change
-                    console.log('Language changed to:', lang);
-                    
-                    // You can add actual translation logic here
-                    // translatePage(lang);
+                    // Translate the page
+                    translatePage(lang);
                 });
             });
+
+            // Initialize language preference
+            initializeLanguage();
 
             // Smooth scrolling for navigation links
             const navLinks = document.querySelectorAll('a[href^="#"]');
