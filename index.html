@@ -37,28 +37,12 @@
             font-weight: 400;
         }
 
-        /* 전체 이미지 반응형 처리 추가 */
         img {
             max-width: 100%;
             height: auto;
             display: block;
-        }
-
-        /* 프로필 이미지 모바일 최적화 */
-        @media (max-width: 768px) {
-            .profile-image {
-                width: 150px;
-                height: 150px;
-                margin: 0 auto 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .profile-image {
-                width: 120px;
-                height: 120px;
-                margin: 0 auto 1.5rem;
-            }
+            object-fit: cover;
+            object-position: center;
         }
 
         .container {
@@ -67,7 +51,7 @@
             padding: 0 24px;
         }
 
-        /* Enhanced Header */
+        /* Header */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
@@ -132,7 +116,7 @@
             width: 100%;
         }
 
-        /* Enhanced Hero Section */
+        /* Hero Section */
         .hero {
             background: var(--gradient-hero);
             padding: 140px 0 100px;
@@ -300,7 +284,7 @@
             box-shadow: var(--shadow-medium);
         }
 
-        /* Enhanced Section Styles */
+        /* Section Styles */
         .section {
             padding: 120px 0;
             position: relative;
@@ -488,18 +472,17 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: center center;
             display: block;
             transition: transform 0.3s ease;
-            max-width: 100%;
-            max-height: 100%;
+            border-radius: 16px;
         }
 
         .activity-slider:hover .slide-track {
             animation-play-state: paused;
         }
 
-        /* Enhanced Services Section */
+        /* Services Section */
         .services {
             background: var(--light-gray);
             position: relative;
@@ -576,7 +559,7 @@
             font-size: 1.05rem;
         }
 
-        /* Enhanced Process Section */
+        /* Process Section */
         .process {
             background: var(--white);
         }
@@ -639,7 +622,7 @@
             line-height: 1.7;
         }
 
-        /* Enhanced Pricing Section */
+        /* Pricing Section */
         .pricing {
             background: var(--light-gray);
             position: relative;
@@ -656,7 +639,6 @@
             margin-right: auto;
         }
 
-        /* 각 카드의 그리드 위치 지정 */
         .pricing-card:nth-child(1) {
             grid-column: 1;
             grid-row: 1;
@@ -827,7 +809,7 @@
             margin: 0;
         }
 
-        /* Enhanced Portfolio Section */
+        /* Portfolio Section */
         .portfolio {
             background: var(--light-gray);
         }
@@ -912,7 +894,7 @@
             font-weight: 500;
         }
 
-        /* Enhanced Contact Section */
+        /* Contact Section */
         .contact {
             background: var(--white);
             position: relative;
@@ -1056,7 +1038,7 @@
             box-shadow: var(--shadow-medium);
         }
 
-        /* Enhanced Footer */
+        /* Footer */
         footer {
             background: var(--primary-blue);
             color: var(--white);
@@ -1075,211 +1057,19 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
         }
 
-        /* Enhanced Responsive Design */
-        @media (max-width: 1024px) {
-            .pricing-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-                max-width: 800px;
-            }
+        /* Scroll animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.4rem;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
-
-            .services-grid,
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                gap: 1.5rem;
-                max-width: 100%;
-            }
-
-            /* 모바일에서는 순서대로 세로 배열 */
-            .pricing-card:nth-child(1),
-            .pricing-card:nth-child(2),
-            .pricing-card:nth-child(3),
-            .pricing-card:nth-child(4) {
-                grid-column: 1;
-                grid-row: auto;
-            }
-
-            .pricing-header {
-                padding: 2rem 1.5rem 1.5rem;
-            }
-
-            .pricing-content {
-                padding: 1.5rem;
-            }
-
-            .amount {
-                font-size: 2.5rem;
-            }
-
-            /* 모바일 활동 배너 최적화 */
-            .activity-banner {
-                padding: 60px 0;
-            }
-
-            .banner-title {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-
-            .banner-subtitle {
-                font-size: 1.1rem;
-                padding: 0 1rem;
-            }
-
-            .banner-overlay {
-                margin-bottom: 2.5rem;
-            }
-
-            .activity-slider {
-                border-radius: 12px;
-                margin: 0 -10px; /* 좌우 여백 조정 */
-                overflow: hidden;
-            }
-
-            .slide {
-                min-width: 180px; /* 더 작게 */
-                height: 120px; /* 더 작게 */
-                margin: 0 2px;
-                border-radius: 8px;
-                flex-shrink: 0;
-                overflow: hidden;
-            }
-
-            .slide img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                border-radius: 8px;
-                max-width: 100%;
-                max-height: 100%;
-                display: block;
-            }
-
-            .slide-track {
-                width: calc(180px * 14); /* 새 크기에 맞춤 */
-                animation: scroll-mobile 30s linear infinite;
-            }
-
-            @keyframes scroll-mobile {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(calc(-180px * 7));
-                }
-            }
-
-            .slide:hover {
-                transform: scale(1.02);
-            }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        /* 추가 모바일 최적화 (더 작은 화면) */
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .banner-title {
-                font-size: 1.6rem;
-            }
-
-            .banner-subtitle {
-                font-size: 1rem;
-            }
-
-            .activity-slider {
-                margin: 0 -15px; /* 더 넓은 여백 조정 */
-                overflow: hidden;
-            }
-
-            .slide {
-                min-width: 150px; /* 매우 작게 */
-                height: 100px; /* 매우 작게 */
-                margin: 0 1px;
-                border-radius: 6px;
-                overflow: hidden;
-            }
-
-            .slide img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                border-radius: 6px;
-                max-width: 100%;
-                max-height: 100%;
-                display: block;
-            }
-
-            .slide-track {
-                width: calc(150px * 14);
-                animation: scroll-small 25s linear infinite;
-            }
-
-            @keyframes scroll-small {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(calc(-150px * 7));
-                }
-            }
-
-            .container {
-                padding: 0 16px;
-            }
-        }
-
-        /* 감사 메시지 모달 스타일 */
+        /* Thank You Modal */
         .thank-you-modal {
             position: fixed;
             top: 0;
@@ -1371,16 +1161,205 @@
             transform: translateY(-2px);
         }
 
-        /* Scroll animations */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto 2rem;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 1.5rem;
+                max-width: 100%;
+            }
+
+            .pricing-card:nth-child(1),
+            .pricing-card:nth-child(2),
+            .pricing-card:nth-child(3),
+            .pricing-card:nth-child(4) {
+                grid-column: 1;
+                grid-row: auto;
+            }
+
+            .pricing-header {
+                padding: 2rem 1.5rem 1.5rem;
+            }
+
+            .pricing-content {
+                padding: 1.5rem;
+            }
+
+            .amount {
+                font-size: 2.5rem;
+            }
+
+            .activity-banner {
+                padding: 60px 0;
+            }
+
+            .banner-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .activity-slider {
+                border-radius: 12px;
+                margin: 0 -10px;
+                overflow: hidden;
+            }
+
+            .slide {
+                min-width: 200px;
+                height: 140px;
+                margin: 0 2px;
+                border-radius: 8px;
+                flex-shrink: 0;
+                overflow: hidden;
+            }
+
+            .slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                border-radius: 8px;
+                display: block;
+            }
+
+            .slide-track {
+                width: calc(200px * 14);
+                animation: scroll-mobile 30s linear infinite;
+            }
+
+            @keyframes scroll-mobile {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-200px * 7));
+                }
+            }
+
+            .slide:hover {
+                transform: scale(1.02);
+            }
         }
 
-        .fade-in-up.visible {
-            opacity: 1;
-            transform: translateY(0);
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                margin: 0 auto 1.5rem;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .banner-title {
+                font-size: 1.6rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1rem;
+            }
+
+            .activity-slider {
+                margin: 0 -15px;
+                overflow: hidden;
+            }
+
+            .slide {
+                min-width: 170px;
+                height: 120px;
+                margin: 0 1px;
+                border-radius: 6px;
+                overflow: hidden;
+            }
+
+            .slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                border-radius: 6px;
+                display: block;
+            }
+
+            .slide-track {
+                width: calc(170px * 14);
+                animation: scroll-small 25s linear infinite;
+            }
+
+            @keyframes scroll-small {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-170px * 7));
+                }
+            }
+
+            .container {
+                padding: 0 16px;
+            }
         }
     </style>
 </head>
@@ -1436,7 +1415,6 @@
         </div>
     </section>
 
-    <!-- Activity Banner Section -->
     <section class="activity-banner">
         <div class="banner-overlay">
             <h2 class="banner-title">Our Work in Action</h2>
@@ -1465,7 +1443,6 @@
                 <div class="slide">
                     <img src="warehouse-visit.jpg" alt="Warehouse and logistics inspection">
                 </div>
-                <!-- Duplicate slides for seamless loop -->
                 <div class="slide">
                     <img src="client-presentation.jpg" alt="Client presentation and consultation">
                 </div>
@@ -1564,7 +1541,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="pricing section">
         <div class="container">
             <h2 class="section-title fade-in-up">Service Packages & Pricing</h2>
@@ -1577,7 +1553,7 @@
                         <h3>Inquiry & Consultation</h3>
                         <div class="price">
                             <span class="currency">$</span>
-                            <span class="amount">500</span>
+                            <span class="amount">399</span>
                             <span class="period">one-time</span>
                         </div>
                     </div>
@@ -1604,7 +1580,7 @@
                         <h3>Product Sample & Market Test</h3>
                         <div class="price">
                             <span class="currency">$</span>
-                            <span class="amount">1,200</span>
+                            <span class="amount">1,700</span>
                             <span class="period">per product</span>
                         </div>
                     </div>
@@ -1894,40 +1870,38 @@
                 observer.observe(element);
             });
 
-            // 향상된 폼 제출 처리 (모달 팝업)
+            // Form submission with modal popup
             const form = document.getElementById('contact-form-submit');
             if (form) {
                 form.addEventListener('submit', function(e) {
-                    e.preventDefault(); // 기본 제출 방지
+                    e.preventDefault();
                     
                     const button = this.querySelector('button[type="submit"]');
                     const originalText = button.textContent;
                     
-                    // 로딩 상태
+                    // Loading state
                     button.innerHTML = '<span style="display: inline-block; animation: spin 1s linear infinite;">⏳</span> Sending...';
                     button.disabled = true;
                     
-                    // FormData를 사용해서 숨겨진 iframe으로 제출
-                    const formData = new FormData(this);
+                    // Submit form via hidden iframe
                     const iframe = document.createElement('iframe');
                     iframe.style.display = 'none';
                     iframe.name = 'hidden_iframe';
                     document.body.appendChild(iframe);
                     
-                    // 폼을 iframe으로 제출
                     this.target = 'hidden_iframe';
                     this.submit();
                     
-                    // 2초 후 성공 모달 표시
+                    // Show success modal after 2 seconds
                     setTimeout(() => {
                         showThankYouModal();
                         
-                        // 폼 리셋
+                        // Reset form
                         this.reset();
                         button.textContent = originalText;
                         button.disabled = false;
                         
-                        // iframe 제거
+                        // Remove iframe
                         setTimeout(() => {
                             if (iframe.parentNode) {
                                 iframe.parentNode.removeChild(iframe);
@@ -1937,9 +1911,8 @@
                 });
             }
             
-            // 감사 모달 표시 함수
+            // Show thank you modal function
             function showThankYouModal() {
-                // 모달 HTML 생성
                 const modalHTML = `
                     <div class="thank-you-modal" id="thankYouModal">
                         <div class="modal-content">
@@ -1956,16 +1929,14 @@
                     </div>
                 `;
                 
-                // 모달을 body에 추가
                 document.body.insertAdjacentHTML('beforeend', modalHTML);
                 
-                // 모달 표시
                 setTimeout(() => {
                     document.getElementById('thankYouModal').classList.add('show');
                 }, 100);
             }
             
-            // 모달 닫기 함수 (전역 함수로 설정)
+            // Close modal function (global)
             window.closeThankYouModal = function() {
                 const modal = document.getElementById('thankYouModal');
                 if (modal) {
@@ -1986,7 +1957,7 @@
             `;
             document.head.appendChild(style);
 
-            console.log('Beautiful Korean Market Entry Agency website loaded! ✨');
+            console.log('Korea Market Entry Agency website loaded successfully! ✨');
         });
     </script>
 </body>
